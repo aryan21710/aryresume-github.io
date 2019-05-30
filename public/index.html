@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="index.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.waitforimages/1.5.0/jquery.waitforimages.min.js"></script>
+		<script src="./playground/jqueryIndex.js"></script>
+	</head>
+
+	<body>
+		<main>
+			<iframe src="./sounds/1-minute-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+
+			<audio id="bikeAudio" autoplay loop>
+				<source src="./sounds/biker.mp3" />
+			</audio>
+
+			<div  id="landingPage">
+				<div class='img1' id="scenery">
+					
+					<div class='img1' id="bikeImg" class="bikeImg">
+						<p></p>
+					</div>
+				</div>
+
+				<div class='img1' id="road">
+					<div id="fwheel">
+						<p></p>
+					</div>
+					<div class='img1' id="bwheel">
+						<p></p>
+					</div>
+				</div>
+			</div>
+
+			<div id="resume">
+				<div id="profile">
+					<div id="contents1">
+						<h1>Profile</h1>
+						<div class="profile">
+							<div id="basicInfo">
+								<div class="image"><img src="./images/arycolouredited.jpg" alt="" width="80%" /></div>
+								<div class="text">
+									<h2>Aryan Sharma</h2>
+									<p>
+										Self Taught Passionate Full Stack Web Developer. Possess strong expertise and 2
+										Years of Well-rounded Experience in Building Quality WebSites and WebApps using
+										modern <b>MERN (MongoDB, Express, React with Redux, Node) stack </b>along with
+										<b>HTML5, CSS3, Javascript</b>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="experience">
+					<div class="workExp">
+						<div id="staticHeader">
+		<div id="title"><h1>Professional Experience</h1></div>
+								<div id="d1">
+									<div id="Prev"><button><<</button></div>
+
+									<div id="stopAnimHere"></div>
+
+									<div id="Next"><button>>></button></div>
+									
+
+								</div>
+						</div>					
+						<div id="weContent">
+							
+
+									<div id="Comp1">
+										<h2>Jan 2017 - Current</h2>
+										<h3>Full Stack Web Developer</h3>
+										<p>Developed Javascript,HTML5,CSS3 enabled Responsive HangMan and Maths-Game.</p>
+									</div>
+												
+							<div id="Comp2">
+								<h2>Feb 2013 - Sep 2014</h2>
+								<h3>Arista Networks, Bangalore - Software Engineer</h3>
+								<p>
+									Worked in testing Data Center enviroment for customers like facebook, google etc.
+									<br />
+									Tested BGP, MPBGP in data center environment. <br />
+									Tested OSPFv2 in data center environment. <br />
+									Wrote Test Plans, filed bugs, resolved customer cases <br />
+									Automated test cases using Python and Arista Automation Framework.<br/>
+								    In depth testing of IP related features like Ipv4, Fragmentation and Reassembly, Jumbo Frame, Vlan. <br/>
+                                   Tracking the bug filed by Team members and bringing closure on Pending /Duplicate/Mistaken bugs. Sending Consolidated list of ShowStopper/Release blocker PR to the Team </br>
+									Part of Recruitment team to Hire the right candidate for QA team.<br/>
+									Interact with development team members with design and Bug related issues and bring it to closure.<br/>
+								</p>
+								<br /><br />
+                            </div>
+
+							<div id="Comp3">
+								 <h2>Stoke Networks, Bangalore - Snr Test Engineer</h2>
+								<h3>April 2011- Nov 2012</h3>
+								<ul>
+									<li>Worked as QA LEAD for Security Gateway Project.</li>
+									<li>Manage, plan, organize, co-ordinate and deliver work for a team of 3 members on different product version releases for IP Features.</li>
+									<li>Understand the Platform architecture, Feature Design Spec, Customer Requirement and provide the TOI to the team members.</li>
+									<li>Compile the Feature level Testplan, Schedule and conduct the Test Plan review for all IP team testplans.</li>
+									<li>Assist and guide Team members in Functional Testing with any technical and Process related Queries.</li>
+									<li>Compile whitepaper on Technical/Platform related topics.  Writing Project Plan for the new projects detailing features to be tested, No of team members/resources needed for the same, No of testbed needed, Coverage from old Scripts/Regression etc.</li>
+                                  </ul>
+
+							</div>
+
+						 <div id="Comp4">
+							<h2> Juniper Networks, Bangalore - MTS4</h2>
+							<h3> Nov 2008 - April 2011</h3>
+							<ul>
+								<li>Testplan creation using RFC, SFS and PRD . Execution of end-to-end manual and automated tests to validate new Product Development life cycle for EX Series router { EX8200, EX4200, EX-XRE Virtual Chassis)</li>
+								<li> Tested NSSU. OSPF,MPLS L3VPN, MPLS L2VPN        </li>
+								<li> Responsibilities as a Team lead in a MPLS Project. Coordinated and managed MPLS Features.  Reviewed all the Functional Spec, Unit Testplan, Systest Plan. Conducted training for the team on MPLS Overview. </li>
+								<li>Worked with Dev team to formulate a comprehensive MPLS L3VPN, MPLS L2VPN test strategy and Unit Test Plan.Provided review comments.</li>
+								<li>Conducted Training on Juniper Automation Process. Made a Tool which will shutdown all Juniper switches/Router automatically every night.</li>
+								<li>Used  effectively during Juniper Shutdown Period. Wrote a whitepaper “HOW TO BOOT THE JUNIPER  SWITCH/ROUTER” for other team members.</li>        
+							</ul>
+                	    </div>
+						<div id="Comp5">
+							<h2> Cisco Systems, Bangalore - Snr Software Engineer                        </h2>
+								<h3> Jul 2006 - Oct 2008</h3>
+								<ul>
+									<li>Test plan creation and execution of manual, and automated tests to  validate new product development life cycle for the  7600 series router for Broadband Features </li>
+									<li>	Reproducing pre-existing defects and customer reported. defects with current builds, minimize the steps for recreation in order to identify the point of failure.</li>
+									<li> Verify defects with instrumented builds provided by the developer.and subsequent verification after code check-in.Open new problem reports for failures detected using DDTS, troubleshoot failures to their root-cause and clearly understand and articulate those failures.</li>
+									<li>Mentored new joinees and helped them in ramping up and Understanding Juniper Process.</li>
+
+								</ul> 
+						</div>
+						<div id="Comp6">
+							<h2>Tata Elxsi, Bangalore - Software Engineer</h2>
+							<h3>April 2005- Jun 2006 </h3>
+							<ul>
+								<li>QA  test engineer   : Client  - World Wide Packets  Location: - Spokane WA.</li>
+								<li>Requirement analysis, test plan creation and execution for protocols like OSPF.</li>
+								<li> Provide inputs and take ownership of all automation script review and execution on a per release basis on a smoke testbed. Fix autons.</li>
+								<li>Automation of test plans independently involving extensive usage of TCL and Expect. </li>
+
+
+							</ul>
+						</div>
+						<div id="Comp7">
+							<h2>Vinciti Networks, Bangalore (E4E SYSTEMS)- NOC Engg</h2>
+							<h3>Mar 2004 - Nov 2004</h3>
+							<ul>
+								<li>Deployment and troubleshooting customer SME networks comprising a router, switch, servers etc. </li>
+								<li>Firewall techniques like packet filtering, application proxies, stateful packet inspection. </li>
+								<li>Implementing and troubleshooting Sonicwall firewall Working on various firewall rules to allow and block required traffic, NAT/NAPT policies, ACL’s etc.</li>
+								<li> Implementing and troubleshooting different types of VPN like site-to-site and remote access VPNConnecting various customer locations through VPN</li>
+							</ul>
+						</div> 
+						<div id="Comp8">
+							<h2>  Digital GlobalSoft (HP) India Pvt Ltd, Bangalore - Network Support Engineer</h2>
+							<h3> Jun 2002 - Feb 2004</h3>
+							<ul>
+								<li>Joined as a technical support engineer. Lateral movement into networking IBU.Helping customers with home networks, DSL connections with various DSL modems like netopia, uhp, broadmax, visionet.</li>
+								<li>Troubleshooting PPPOE connection involving technologies like DSL .Establishing and troubleshooting small and medium enterprise networks with  multiple computers, routers and switches.</li>
+								</ul>         
+						</div>
+				</div>
+
+					
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div id="skills">
+					<div id="contents1">
+						<h1>TECHNICAL SKILLS</h1>
+						<ol>
+							<h3>Programming Skills</h3>
+							<ul>
+								<li>
+									HTML5, Javascript, CSS3, Nodejs, MongoDB, ExpressJS, ReactJS, PhaserJS, Redux,
+									JQuery, GIT, Responsive Design, Debugging with Chrome DevTools
+								</li>
+							</ul>
+							<h3>Networking Skills</h3>
+							<ul>
+								<li>
+									OSI 7 layer model. TCP, IP,ICMP, ARP, Routing protocols RIP,OSPF,BGP3, MPBGP. <br />
+									Clear understanding of subnetting, MPLS, MPLS L3 VPN, MPLS L2VPN.
+								</li>
+							</ul>
+							<h3>Testing Tools</h3>
+							<ul>
+								<li>Ixia Explorer, IxNetwork, Spirent Application Center, Mu Dynamics.</li>
+							</ul>
+						</ol>
+					</div>
+				</div>
+				<div id="education">
+					<div id="contents2">
+						<h1>EDUCATION</h1>
+						<div id="eduDetails">
+							<p>March 98 - March 02</p>
+							<p>Kits College Of Engineering, RAMTEK</p>
+							<p>Nagpur University</p>
+							<p>Bachelor of Engineering</p>
+							<p>60% Aggregate in B.E in Computer Technology.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,670 @@
+* {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	height: 99.9%;
+	margin: 0;
+    padding: 0;
+    
+}
+
+@font-face {
+	font-family: '8515oem';
+	src: url('./fonts/Dotf1.woff') format('woff'), url('./fonts/Dotf1.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'caviardreams';
+	src: url('./fonts/CaviarDreams.ttf') format('truetype');
+}
+
+main {
+	height: 99.9%;
+	display: grid;
+	grid-template-columns: minmax(auto, 560vw) minmax(auto, 100vw);
+	overflow: hidden;
+}
+
+#landingPage {
+	position: relative;
+	display: grid;
+	grid-template-rows: minmax(auto, 1fr) minmax(auto, 0.25fr);
+	width: 560vw;
+}
+
+#scenery {
+	background-image: url('./images/mainsignboard.jpg');
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+.smokeul {
+	list-style-type: none;
+	position: absolute;
+	bottom: 0vh;
+	left: 200px;
+	/* transform: translateX(-50%); */
+	margin: 0;
+	padding: 0;
+}
+
+.smokeul li {
+	position: absolute;
+	border-radius: 5vw;
+	width: 5.34vw;
+	height: 10.68vh;
+	background: #262626;
+}
+
+.smokeul li:nth-child(even) {
+	animation: animEven 2.8s linear infinite;
+}
+
+.smokeul li:nth-child(odd) {
+	animation: animOdd 2.8s linear infinite;
+}
+
+.smokeul li:nth-child(9) {
+	animation: none;
+	filter: blur(15px);
+}
+
+@keyframes animEven {
+	0% {
+		transform: translate(0, 0) scale(1);
+		opacity: 1;
+		filter: blur(5px);
+	}
+
+	100% {
+		transform: translate(100px, -500px) scale(3);
+		opacity: 0;
+		filter: blur(10px);
+	}
+}
+
+@keyframes animOdd {
+	0% {
+		transform: translate(0, 0) scale(1);
+		opacity: 1;
+		filter: blur(5px);
+	}
+
+	100% {
+		transform: translate(-100px, -500px) scale(3);
+		opacity: 0;
+		filter: blur(10px);
+	}
+}
+
+.smokeul li:nth-child(1) {
+	animation-delay: 0.2s;
+}
+
+.smokeul li:nth-child(2) {
+	animation-delay: 0.4s;
+}
+
+.smokeul li:nth-child(3) {
+	animation-delay: 0.8s;
+}
+
+.smokeul li:nth-child(4) {
+	animation-delay: 1.2s;
+}
+
+.smokeul li:nth-child(5) {
+	animation-delay: 1.6s;
+}
+
+.smokeul li:nth-child(6) {
+	animation-delay: 2s;
+}
+
+.smokeul li:nth-child(7) {
+	animation-delay: 2.4s;
+}
+
+.smokeul li:nth-child(8) {
+	animation-delay: 2.8s;
+}
+
+.smokeul li:nth-child(9) {
+	animation-delay: 3.2s;
+}
+
+#bikeImg {
+	position: absolute;
+	bottom: -40vh;
+	background-image: url('./images/bikewithoutwheel.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+	z-index: 1;
+	/* border: 3px solid black; */
+}
+
+
+@keyframes slide1 {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+
+	100% {
+		transform: translate3d(-460vw, 0, 0);
+	}
+}
+
+.resumeAnim {
+	animation: slide1 9s linear forwards;
+}
+
+/* .slide2 {
+	animation: animslide2 4s ease-in forwards;
+}
+@keyframes animslide2 {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+
+	100% {
+		transform: translate3d(100vw, 0, 0);
+	}
+} */
+
+
+
+#road {
+	background-image: url('./images/road.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+	height: 25vh;
+	bottom: 0vh;
+	position: relative;
+	/* border: 2px solid black; */
+}
+
+#bwheel {
+	position: absolute;
+	bottom: 20vh;
+	float: left;
+	object-fit: 100% 100%;
+	background-image: url('./images/unnamed.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+}
+
+#fwheel {
+	position: absolute;
+	bottom: 20vh;
+	object-fit: 100% 100%;
+	background-image: url('./images/unnamed.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+}
+
+.rotateWheel1 {
+	animation: example 4s linear infinite;
+}
+
+.rotateWheel2 {
+	animation: example 0.01s linear infinite;
+}
+
+#banner {
+	content: url('./images/poles.png')
+}
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  */
+#resume {
+	position: relative;
+	width: 100vw;
+	display: grid;
+	grid-template-rows: repeat(4, 100vh);
+	overflow: auto;
+	animation: slide1 4s linear forwards;
+}
+
+#profile,
+#skills {
+	background-image: url('./images/orangeBG.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 20px;
+}
+
+.profile {
+	display: grid;
+	grid-template-rows: 30vh 38vh;
+	grid-row-gap: 1vw;
+	grid-template-columns: 68vw;
+}
+
+.image {
+	align-items: center;
+	display: flex;
+	padding: 20px;
+}
+
+#basicInfo {
+	display: grid;
+	grid-template-columns: 1fr 1.5fr;
+	height: 60vh;
+}
+.text {
+	padding: 20px 0px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 25px;
+}
+h2,
+h3,
+h4 {
+	font-family: 'caviardreams';
+	font-weight: bolder;
+    color: rgb(255, 68, 93);
+    letter-spacing: 1px;
+    word-spacing: 1.5px;
+}
+li,
+p {
+	font-family: 'caviardreams';
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 28px;
+    color: #ffffcc;
+        letter-spacing: 1px;
+
+        word-spacing: 1.5px;
+
+}
+h3 {
+	font-weight: bold;
+	font-family: '8514oem';
+}
+h1 {
+	text-align: center;
+	font-family: '8514oem';
+	font-size: 40px;
+	margin: 0%;
+}
+
+#profileStatement {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #331300;
+	border-radius: 20px;
+	overflow: auto;
+	padding: 20px;
+	text-align: center;
+}
+
+#profileStatement {
+	text-align: left;
+}
+
+#basicInfo h3 {
+	font-size: 1em;
+}
+
+#basicInfo > p {
+	font-size: 0.8em;
+}
+
+p #email {
+	text-transform: lowercase;
+}
+
+#experience,
+#education {
+	background-image: url('./images/nightBG.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: flex-end;
+	padding: 20px;
+}
+
+#eduDetails {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 50px;
+	overflow: auto;
+}
+
+#contents1,
+#contents2 {
+	width: 75vw;
+	height: 95vh;
+	/* border: 2px solid white; */
+	opacity: 0.8;
+	border-radius: 20px;
+	line-height: 1.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	margin-right: 20px;
+}
+
+#contents1 {
+	background-color: #330000;
+	padding: 10px;
+}
+
+#contents2 {
+	background-color: #000033;
+	overflow: auto;
+	padding: 20px;
+}
+
+#contents1 ol {
+	overflow: auto;
+}
+
+#contents2 h2 {
+	border-bottom: 3px double #ffffcc;
+}
+
+#contents2 h3 {
+	border-bottom: 1px solid #ffffcc;
+}
+
+h1 {
+	font-family: '8514oem';
+	color: #ffffcc;
+}
+
+h3,
+h4,
+ol,
+li,
+h2 {
+	font-family: 'caviardreams';
+	color: #ffffcc;
+}
+
+h1 {
+	text-align: center;
+	line-height: 1.5em;
+	border-bottom: 3px dashed #ffffcc;
+}
+
+@keyframes example {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.workExp {
+	/* border: 2px solid white; */
+	width: 75vw;
+
+	opacity: 0.8;
+	border-radius: 20px;
+	background-color: #000033;
+	padding: 0;
+	margin-right: 20px;
+	overflow: hidden;
+    height: 95vh;
+    position: relative;
+}
+
+#staticHeader {
+    position: absolute;
+    top: 0;
+    left: 0vw;
+    z-index: 1;
+}
+
+#weContent {
+    margin-left: 4.2vw;
+    z-index:-1;
+	margin-bottom: 10px;
+	padding: 0px;
+	overflow: hidden;
+	display: grid;
+    grid-template-columns: repeat(8, 66vw);
+    height:75vh;
+	width: 600vw;
+	grid-gap: 10vw;
+    height: 90vh;
+    position: relative;
+
+}
+
+
+.workExp2 {
+	display: grid;
+	grid-template-rows: 12vh 50vh;
+    width: 74vw;
+    position: relative;
+}
+
+#title {
+	display: flex;
+	justify-content: center;
+    margin-bottom: 3vh;
+}
+
+#d1 {
+	display: grid;
+	grid-template-columns: 4vw 66vw 4vw;
+	height: 75vh;
+}
+
+#Prev {
+	color: #ffffcc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    font: 20px bolder;
+}
+#Prev button, #Next button{
+    width: 4vw;
+}
+
+#Next button, #Prev button {
+    z-index: 1;
+}
+
+#Comp1,
+#Comp2,
+#Comp3,
+#Comp4,
+#Comp5,
+#Comp6,
+#Comp7,
+#Comp8 {
+	position: relative;
+    border-radius: 20px;
+    height: 75vh;
+	margin-top: 12vh;
+
+	/* border: 2px solid white; */
+}
+
+#Next {
+	color: #ffffcc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font: 20px bold;
+}
+
+
+
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+@media screen and (max-width: 600px) and (min-width: 400px) {
+	* {
+		padding: 0;
+	}
+	.profile {
+		display: grid;
+		grid-template-rows: 26vh 48vh;
+		grid-row-gap: 1vh;
+		grid-template-columns: 60vw;
+		overflow: auto;
+	}
+	main,
+	#resume {
+		border: 2px solid red;
+	}
+
+	.smokeul li {
+		border-radius: 50%;
+		width: 8vw;
+		height: 4vh;
+	}
+
+	#profile,
+	#skills,
+	#education {
+		background-size: 100% 100%;
+		padding: 20px;
+	}
+
+	#eduDetails,
+	#profileStatement,
+	#basicInfo {
+		padding: 10px;
+		margin-top: 10px;
+	}
+
+	#profileStatement p,
+	#basicInfo p {
+		margin-top: 20px;
+	}
+
+	#basicInfo p,
+	p {
+		font-size: 0.6em;
+		color: #ffffcc;
+	}
+
+	h1,
+	li {
+		font-size: 1em;
+	}
+
+	h2,
+	h3 {
+		font-size: 0.8em;
+	}
+
+	h3,
+	ul {
+		font-size: 0.7em;
+	}
+
+	.smokeAnim p {
+		font-size: 1.2em;
+		/* font: 25px bold; */
+	}
+}
+
+@media screen and (max-width: 400px) and (min-width: 300px) {
+	#landingPage {
+		background-size: 100% 100%;
+	}
+
+	.profile {
+		display: grid;
+		grid-template-rows: 25vh 45vh;
+		grid-row-gap: 2vh;
+		grid-template-columns: 65vw;
+		overflow: auto;
+	}
+
+	.smokeul li {
+		border-radius: 50%;
+		width: 8vw;
+		height: 4vh;
+	}
+	main {
+		/* border: 2px solid blue; */
+	}
+
+	#smoke {
+		font: 0.65em bolder;
+	}
+
+	#profile,
+	#skills,
+	#experience,
+	#education {
+		background-size: 100% 100%;
+		padding: 10px;
+	}
+
+	#basicInfo h3 {
+		font-size: 0.7em;
+	}
+
+	#basicInfo p,
+	#profileStatement p {
+		font-size: 0.6em;
+		color: #ffffcc;
+	}
+
+	h1 {
+		font-size: 0.9em;
+	}
+
+	h2 {
+		font-size: 0.8em;
+	}
+
+	h3,
+	ul {
+		font-size: 0.7em;
+	}
+
+	p,
+	li {
+		font-size: 0.7em;
+		color: #ffffcc;
+	}
+
+	#eduDetails {
+		padding: 0px;
+		justify-content: flex-start;
+	}
+
+	ol,
+	ul,
+	ul li {
+		text-align: left;
+	}
+
+	.smokeAnim p {
+		font-size: 1em;
+		/* font: 25px bold; */
+	}
+}

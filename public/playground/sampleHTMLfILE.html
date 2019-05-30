@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.waitforimages/1.5.0/jquery.waitforimages.min.js"></script>
+
+	<title></title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+	
+
+		p {
+			font-size: 20px;
+			position: relative;
+			color: red;
+		}
+	 #test {
+			margin: 150px;
+			border: 2px solid red;
+			padding: 50px;
+			width: 200px;
+			height: 200px;
+			background-image: url('./../images/unnamed.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			margin: 50px;
+		}
+
+		#test1 {
+			margin: 150px;
+			border: 2px solid red;
+			padding: 50px;
+			width: 200px;
+			height: 200px;
+			background-image: url('./../images/arycolouredited.jpg');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+			#test2 {
+			margin: 150px;
+			border: 2px solid red;
+			padding: 50px;
+			width: 200px;
+			height: 200px;
+			background-image: url('./../images/poles.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		ol {
+			list-style-type: none
+		}
+
+		li {
+			float: left;
+			font-size: 100px;
+			color : red;
+		}
+
+
+			.dummy {
+				animation: example 4s linear 1;
+			}
+
+		@keyframes example {
+			from {color : red}
+			to {color : black}
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<p> this is a dummy html file. </p>
+
+	<div>
+			<img>
+			<div id="test">
+				<div id="test1"></div>
+			</div>
+			<ol id="arrow">
+				<div id="test2"></div>
+				<li>=</li>
+				<li>=</li>
+				<li>=</li>
+				<li>=</li>
+				<li>></li>
+				<li>Next</li>
+			</ol>
+
+	</div>
+	<script>
+		// const img=document.querySelector('img');
+		// img.addEventListener('load',function() {
+		// 	// alert('starting animation now');
+		// 	document.querySelectorAll('#arrow li').forEach(f=>f.classList.add('dummy'))
+		// })
+
+// 		 $(document).ready(function(){
+// 			$('<img/>').attr('src', '../images/road.png').on('load', function() {
+//    $(this).remove(); // prevent memory leaks as @benweet suggested
+//    $('#test').css('background-image', 'url(../images/road.png)');
+// });
+
+$('body').waitForImages(function() {
+    // alert('All images have loaded.');
+}, function(loaded, count, success) {
+//    alert(loaded + ' of ' + count + ' images has ' + (success ? 'loaded' : 'failed to load') +  '.');
+   $('#arrow li').addClass('dummy');
+});
+
+
+            
+		
+		
+	
+	
+	
+	
+
+	</script>
+</body>
+</html>
