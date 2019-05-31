@@ -233,6 +233,50 @@ main {
 	animation: slide1 4s linear forwards;
 }
 
+
+ th {
+		border: 2px solid #ffffcc;
+		height: 7vh;
+		color: #ffffcc;
+		font-size: 25px;
+	}
+
+	th:nth-of-type(1) {
+				width: 10vw;
+
+	}
+		th:nth-of-type(2) {
+		width: 45vw;
+	}
+
+	td {
+		width: 20vw;
+		color: #ffffcc;
+		font-size: 20px;
+		height: 10vh;
+	    border: 2px solid #ffffcc;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	td a {
+		color: #ffffcc;
+		font-size: 20px;
+
+	}
+
+	td a:hover {
+		color: pink;
+	}
+
+
+
+
+.image > img {
+	content: url('./images/arycolouredited.jpg');
+	width: 80%;
+}
+
 #profile,
 #skills {
 	background-image: url('./images/orangeBG.png');
@@ -424,7 +468,6 @@ h1 {
 .workExp {
 	/* border: 2px solid white; */
 	width: 75vw;
-
 	opacity: 0.8;
 	border-radius: 20px;
 	background-color: #000033;
@@ -444,7 +487,7 @@ h1 {
 
 #weContent {
     margin-left: 4.2vw;
-    z-index:-1;
+    /* z-index:-1; */
 	margin-bottom: 10px;
 	padding: 0px;
 	overflow: hidden;
@@ -469,7 +512,7 @@ h1 {
 #title {
 	display: flex;
 	justify-content: center;
-    margin-bottom: 3vh;
+    margin: 3vh 0vh;
 }
 
 #d1 {
@@ -490,7 +533,7 @@ h1 {
 }
 
 #Next button, #Prev button {
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 #Comp1,
@@ -505,8 +548,7 @@ h1 {
     border-radius: 20px;
     height: 75vh;
 	margin-top: 12vh;
-
-	/* border: 2px solid white; */
+	z-index: 1;
 }
 
 #Next {
@@ -517,9 +559,6 @@ h1 {
 	font: 20px bold;
 }
 
-
-
-
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 @media screen and (max-width: 600px) and (min-width: 400px) {
 	* {
@@ -527,14 +566,45 @@ h1 {
 	}
 	.profile {
 		display: grid;
-		grid-template-rows: 26vh 48vh;
-		grid-row-gap: 1vh;
+		grid-template-rows: 84vh;
 		grid-template-columns: 60vw;
 		overflow: auto;
 	}
 	main,
 	#resume {
-		border: 2px solid red;
+		border: 2px solid blue;
+	}
+
+	#basicInfo {
+		display: grid;
+		grid-template-rows: 0.5fr 1fr;
+		grid-template-columns: 60vw;
+		justify-content: center;
+	}
+	.text {
+		padding: 0px;
+		font-size: 25px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.image, .text>h2 {
+		margin-left: auto;
+		margin-right:auto;
+		align-items: center;
+	}
+
+	.text > p {
+		line-height: 22px;
+		font-size: 0.6em;
+	}
+
+	
+
+	.image> img {
+		width: 30vw;
+		height:30vh;
 	}
 
 	.smokeul li {
@@ -543,11 +613,22 @@ h1 {
 		height: 4vh;
 	}
 
+	#experience {
+		display: flex;
+		padding:0;
+		overflow: auto;
+	}
+
 	#profile,
 	#skills,
 	#education {
 		background-size: 100% 100%;
 		padding: 20px;
+	}
+
+	
+	#title {
+		margin-bottom: 10px;
 	}
 
 	#eduDetails,
@@ -562,26 +643,147 @@ h1 {
 		margin-top: 20px;
 	}
 
-	#basicInfo p,
-	p {
-		font-size: 0.6em;
+	
+	p,li {
+		font-size: 0.9em;
 		color: #ffffcc;
 	}
 
-	h1,
-	li {
-		font-size: 1em;
+	h1 {
+		font-size: 1.5em;
 	}
 
-	h2,
-	h3 {
+	.workExp {
+		width: 95vw;
+		border: 2px solid white;
+		overflow: auto;
+	}
+
+	
+
+	#d1 {
+		display: grid;
+		grid-template-columns: 8vw 76vw 8vw;
+		height: 85vh;
+
+	}
+
+
+
+	
+
+
+	#weContent {
+    margin-left: 8vw;
+    /* z-index:-1; */
+	margin-bottom: 10px;
+	padding: 0px;
+	overflow: auto;
+	display: grid;
+    grid-template-columns: repeat(8, 76vw);
+	width: 600vw;
+	grid-gap: 10vw;
+    height: 90vh;
+	position: relative;
+
+
+	}
+
+	
+	th {
+		border: 2px solid #ffffcc;
+		height: 7vh;
+		color: #ffffcc;
+		font-size: 1.4em;
+	}
+
+	th:nth-of-type(1) {
+				width: 8vw;
+
+	}
+		th:nth-of-type(2) {
+		width: 50vw;
+	}
+
+	td {
+		width: 20vw;
+		color: #ffffcc;
+		font-size: 1.1em;
+		height: 10vh;
+	    border: 2px solid #ffffcc;
+		text-align: center;
+		cursor: pointer;
+		padding:5px;
+	}
+
+	td a {
+		color: #ffffcc;
 		font-size: 0.8em;
+
 	}
 
-	h3,
-	ul {
-		font-size: 0.7em;
+	td a:hover {
+		color: pink;
 	}
+
+
+
+	
+
+
+	#Comp1,
+#Comp2,
+#Comp3,
+#Comp4,
+#Comp5,
+#Comp6,
+#Comp7,
+#Comp8 {
+
+	position: relative;
+    border-radius: 20px;
+    height: 78vh;
+	z-index: 1;
+							overflow: auto;
+							padding:5px;
+							border: 2px solid red;
+
+}
+ul {
+	list-style-type: circle;
+}
+
+#contents ul li {
+	font-size: 0.8em;
+}
+
+
+
+
+
+
+
+	#Prev {
+		margin:0;
+		padding:0;
+	}
+
+	#Prev button, #Next button{
+    width: 6vw;
+}
+
+	h2 {
+		font-size: 1.2em;
+		margin:0;
+		padding:0;
+	}
+
+	h3 {
+		font-size: 1em;
+		margin:0 0 10 0;
+		padding:0;
+	}
+
 
 	.smokeAnim p {
 		font-size: 1.2em;
@@ -610,6 +812,7 @@ h1 {
 	main {
 		/* border: 2px solid blue; */
 	}
+
 
 	#smoke {
 		font: 0.65em bolder;

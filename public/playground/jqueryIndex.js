@@ -263,18 +263,13 @@ let setup = (function() {
 
 														$('#Next > button').click(
 															() => {
-																$(
-																	'#Prev > button'
-																).attr(
+																$('#Prev > button').attr(
 																	'disabled',
 																	false
 																);
 																$(
 																	'#Next > button'
-																).attr(
-																	'disabled',
-																	true
-																);
+																).attr({disabled:true,color:'red'});
 
 																if (
 																	$(
