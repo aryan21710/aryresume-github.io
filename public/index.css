@@ -228,7 +228,7 @@ main {
 	position: relative;
 	width: 100vw;
 	display: grid;
-	grid-template-rows: repeat(4, 100vh);
+	grid-template-rows: repeat(4, 140vh);
 	overflow: auto;
 	animation: slide1 4s linear forwards;
 }
@@ -398,10 +398,12 @@ p #email {
 	overflow: auto;
 }
 
+
+
 #contents1,
 #contents2 {
-	width: 75vw;
-	height: 95vh;
+	width: 74vw;
+	height: 120vh;
 	/* border: 2px solid white; */
 	opacity: 0.8;
 	border-radius: 20px;
@@ -411,6 +413,8 @@ p #email {
 	justify-content: flex-start;
 	align-items: center;
 	margin-right: 20px;
+		margin-top: auto;
+	margin-bottom:auto;
 }
 
 #contents1 {
@@ -466,76 +470,94 @@ h1 {
 }
 
 .workExp {
+	margin-top: auto;
+	margin-bottom:auto;
 	/* border: 2px solid white; */
-	width: 75vw;
+	width: 74vw;
 	opacity: 0.8;
 	border-radius: 20px;
 	background-color: #000033;
 	padding: 0;
 	margin-right: 20px;
-	overflow: hidden;
-    height: 95vh;
-    position: relative;
+	overflow: auto;
+    height: 120vh;
+	position: relative;
 }
 
 #staticHeader {
     position: absolute;
     top: 0;
     left: 0vw;
-    z-index: 1;
-}
-
-#weContent {
-    margin-left: 4.2vw;
-    /* z-index:-1; */
-	margin-bottom: 10px;
-	padding: 0px;
-	overflow: hidden;
-	display: grid;
-    grid-template-columns: repeat(8, 66vw);
-    height:75vh;
-	width: 600vw;
-	grid-gap: 10vw;
-    height: 90vh;
-    position: relative;
-
-}
-
-
-.workExp2 {
-	display: grid;
-	grid-template-rows: 12vh 50vh;
-    width: 74vw;
-    position: relative;
+	z-index: 1;
+	height: 120vh;
+	width:74vw;
 }
 
 #title {
 	display: flex;
 	justify-content: center;
-    margin: 3vh 0vh;
+	align-items: center;
 }
 
 #d1 {
 	display: grid;
-	grid-template-columns: 4vw 66vw 4vw;
-	height: 75vh;
+	grid-template-rows: 6vh 90vh 6vh;
+	width: 74vw;
+	margin-top: 5vh;
+
+	
 }
 
-#Prev {
+#Prev,#Next {
 	color: #ffffcc;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    font: 20px bolder;
+	font: 20px bolder;
+
 }
 #Prev button, #Next button{
-    width: 4vw;
+    width: 10vw;
 }
 
 #Next button, #Prev button {
     /* z-index: 1; */
 }
 
+#weContent {
+    /* z-index:-1; */
+	padding: 0px;
+	overflow: hidden;
+	display: grid;
+    grid-template-columns: repeat(8, 74vw);
+    height:85vh;
+	width: 592vw;
+	/* grid-gap: 10vw; */
+	position: relative;
+	margin-top: 22vh;
+		                /* border: 2px solid red; */
+
+	/* margin-left: 5vw; */
+		/* border: 2px solid magenta; */
+
+
+}
+
+
+/* .workExp2 {
+	display: grid;
+	grid-template-rows: 12vh 50vh;
+    width: 74vw;
+	position: relative;
+} */
+
+
+
+#stopAnimHere {
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+}
 #Comp1,
 #Comp2,
 #Comp3,
@@ -545,10 +567,13 @@ h1 {
 #Comp7,
 #Comp8 {
 	position: relative;
-    border-radius: 20px;
-    height: 75vh;
-	margin-top: 12vh;
+	border-radius: 20px;
+		/* display: flex;
+	flex-direction: column;
+	align-items:center;	 */
 	z-index: 1;
+	/* border: 2px solid white; */
+	padding: 20px;
 }
 
 #Next {
@@ -556,318 +581,8 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font: 20px bold;
-}
-
-/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
-@media screen and (max-width: 600px) and (min-width: 400px) {
-	* {
-		padding: 0;
-	}
-	.profile {
-		display: grid;
-		grid-template-rows: 84vh;
-		grid-template-columns: 60vw;
-		overflow: auto;
-	}
-	main,
-	#resume {
-		border: 2px solid blue;
-	}
-
-	#basicInfo {
-		display: grid;
-		grid-template-rows: 0.5fr 1fr;
-		grid-template-columns: 60vw;
-		justify-content: center;
-	}
-	.text {
-		padding: 0px;
-		font-size: 25px;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-	}
-
-	.image, .text>h2 {
-		margin-left: auto;
-		margin-right:auto;
-		align-items: center;
-	}
-
-	.text > p {
-		line-height: 22px;
-		font-size: 0.6em;
-	}
-
-	
-
-	.image> img {
-		width: 30vw;
-		height:30vh;
-	}
-
-	.smokeul li {
-		border-radius: 50%;
-		width: 8vw;
-		height: 4vh;
-	}
-
-	#experience {
-		display: flex;
-		padding:0;
-		overflow: auto;
-	}
-
-	#profile,
-	#skills,
-	#education {
-		background-size: 100% 100%;
-		padding: 20px;
-	}
-
-	
-	#title {
-		margin-bottom: 10px;
-	}
-
-	#eduDetails,
-	#profileStatement,
-	#basicInfo {
-		padding: 10px;
-		margin-top: 10px;
-	}
-
-	#profileStatement p,
-	#basicInfo p {
-		margin-top: 20px;
-	}
-
-	
-	p,li {
-		font-size: 0.9em;
-		color: #ffffcc;
-	}
-
-	h1 {
-		font-size: 1.5em;
-	}
-
-	.workExp {
-		width: 95vw;
-		border: 2px solid white;
-		overflow: auto;
-	}
-
-	
-
-	#d1 {
-		display: grid;
-		grid-template-columns: 8vw 76vw 8vw;
-		height: 85vh;
-
-	}
-
-
-
-	
-
-
-	#weContent {
-    margin-left: 8vw;
-    /* z-index:-1; */
-	margin-bottom: 10px;
-	padding: 0px;
-	overflow: auto;
-	display: grid;
-    grid-template-columns: repeat(8, 76vw);
-	width: 600vw;
-	grid-gap: 10vw;
-    height: 90vh;
-	position: relative;
-
-
-	}
-
-	
-	th {
-		border: 2px solid #ffffcc;
-		height: 7vh;
-		color: #ffffcc;
-		font-size: 1.4em;
-	}
-
-	th:nth-of-type(1) {
-				width: 8vw;
-
-	}
-		th:nth-of-type(2) {
-		width: 50vw;
-	}
-
-	td {
-		width: 20vw;
-		color: #ffffcc;
-		font-size: 1.1em;
-		height: 10vh;
-	    border: 2px solid #ffffcc;
-		text-align: center;
-		cursor: pointer;
-		padding:5px;
-	}
-
-	td a {
-		color: #ffffcc;
-		font-size: 0.8em;
-
-	}
-
-	td a:hover {
-		color: pink;
-	}
-
-
-
-	
-
-
-	#Comp1,
-#Comp2,
-#Comp3,
-#Comp4,
-#Comp5,
-#Comp6,
-#Comp7,
-#Comp8 {
-
-	position: relative;
-    border-radius: 20px;
-    height: 78vh;
-	z-index: 1;
-							overflow: auto;
-							padding:5px;
-							border: 2px solid red;
-
-}
-ul {
-	list-style-type: circle;
-}
-
-#contents ul li {
-	font-size: 0.8em;
+	font: 20px bolder;
 }
 
 
 
-
-
-
-
-	#Prev {
-		margin:0;
-		padding:0;
-	}
-
-	#Prev button, #Next button{
-    width: 6vw;
-}
-
-	h2 {
-		font-size: 1.2em;
-		margin:0;
-		padding:0;
-	}
-
-	h3 {
-		font-size: 1em;
-		margin:0 0 10 0;
-		padding:0;
-	}
-
-
-	.smokeAnim p {
-		font-size: 1.2em;
-		/* font: 25px bold; */
-	}
-}
-
-@media screen and (max-width: 400px) and (min-width: 300px) {
-	#landingPage {
-		background-size: 100% 100%;
-	}
-
-	.profile {
-		display: grid;
-		grid-template-rows: 25vh 45vh;
-		grid-row-gap: 2vh;
-		grid-template-columns: 65vw;
-		overflow: auto;
-	}
-
-	.smokeul li {
-		border-radius: 50%;
-		width: 8vw;
-		height: 4vh;
-	}
-	main {
-		/* border: 2px solid blue; */
-	}
-
-
-	#smoke {
-		font: 0.65em bolder;
-	}
-
-	#profile,
-	#skills,
-	#experience,
-	#education {
-		background-size: 100% 100%;
-		padding: 10px;
-	}
-
-	#basicInfo h3 {
-		font-size: 0.7em;
-	}
-
-	#basicInfo p,
-	#profileStatement p {
-		font-size: 0.6em;
-		color: #ffffcc;
-	}
-
-	h1 {
-		font-size: 0.9em;
-	}
-
-	h2 {
-		font-size: 0.8em;
-	}
-
-	h3,
-	ul {
-		font-size: 0.7em;
-	}
-
-	p,
-	li {
-		font-size: 0.7em;
-		color: #ffffcc;
-	}
-
-	#eduDetails {
-		padding: 0px;
-		justify-content: flex-start;
-	}
-
-	ol,
-	ul,
-	ul li {
-		text-align: left;
-	}
-
-	.smokeAnim p {
-		font-size: 1em;
-		/* font: 25px bold; */
-	}
-}

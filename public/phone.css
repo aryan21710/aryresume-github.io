@@ -1,0 +1,304 @@
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+	* {
+		padding: 0;
+	}
+
+
+    #resume {
+	width: 100vw;
+	display: grid;
+	grid-template-rows: repeat(4, auto);
+            position: relative;
+            overflow: auto;
+
+            justify-content: flex-start;
+
+}
+
+	.profile {
+		display: grid;
+		grid-template-rows: 85vh;
+		grid-template-columns: 60vw;
+		/* overflow: auto; */
+    }
+    
+    #contents1,
+#contents2 {
+	width: 85vw;
+    height: 90vh;
+    	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	
+	margin: auto;
+	/* border: 2px solid white; */
+}
+	
+
+	#basicInfo {
+		display: grid;
+        grid-template-rows: 50% 90%;
+        grid-gap: 10px;
+		grid-template-columns: 60vw;
+        justify-content: center;
+	}
+	.text {
+		padding: 0px;
+		font-size: 25px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.image, .text>h2 {
+		margin-left: auto;
+		margin-right:auto;
+		align-items: center;
+	}
+
+	.text > p {
+		line-height: 22px;
+		font-size: 0.6em;
+	}
+
+	
+
+	.image> img {
+		width: 30vw;
+		height:30vh;
+	}
+
+	.smokeul li {
+		border-radius: 50%;
+		width: 8vw;
+		height: 4vh;
+	}
+
+	
+    #profile, #experience {
+        height: 100%;
+    }
+
+	#profile,
+	#skills,
+	#education {
+		background-size: 100% 100%;
+		padding: 20px;
+	}
+
+	
+	#title  {
+		margin-bottom: 10px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#eduDetails,
+	#profileStatement,
+	#basicInfo {
+		padding: 10px;
+		margin-top: 10px;
+	}
+
+	#profileStatement p,
+	#basicInfo p {
+		margin-top: 20px;
+	}
+
+	
+	p,li {
+		font-size: 0.9em;
+		color: #ffffcc;
+	}
+
+	h1 {
+        font-size: 1.5em;
+        margin-top: 0.5em;
+    }
+    
+
+	/*############################# */
+
+	#experience {
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+		/* overflow: auto; */
+	margin: 0;
+	position: relative;
+	padding:20px 0px;
+
+    }
+    
+  
+
+	.workExp {
+        width: 85vw;
+        	overflow: hidden;
+
+		/* overflow:auto; */
+		margin-left: auto;
+		margin-right: auto;
+
+        align-items: center;
+        height: 95vh;
+		position: relative;
+		/* border: 2px solid red; */
+	}
+
+	#staticHeader {
+         position: absolute;
+        top:0;
+        left: 0vw;
+		width: 82.5vw;
+		/* margin-left: auto;
+        margin-right: auto; */
+		height: 100vh;
+		
+        /* z-index:1;   */
+	}
+
+	
+
+	#d1 {
+        display: grid;
+        grid-template-rows: 4vh 77.5vh 4vh;
+        width: 82.5vw;
+        /* border: 2px solid magenta; */
+        margin:0;
+
+    }
+    
+    #Prev,#Next {
+        /* border: 2px solid white; */
+        padding:0;
+        
+	}
+	
+	    #stopAnimHere {
+    /* height: 72.5vh; */
+    display: flex;
+	flex-direction: column;
+	align-items:center;
+
+}
+
+
+    #Prev button, #Next button{
+    width: 20vw;
+    margin: auto;
+}
+
+	#weContent {
+    /* z-index:1; */
+	margin-top: 14vh;
+	/* padding: 10px; */
+	overflow: auto;
+	display: grid;
+    grid-template-columns: repeat(8, 85vw);
+        height: 74vh;
+
+	width: 680vw;
+    position: relative;
+
+            /* border: 2px solid magenta; */
+	}
+	
+
+	#Comp1,
+#Comp2,
+#Comp3,
+#Comp4,
+#Comp5,
+#Comp6,
+#Comp7,
+#Comp8 {
+	position: relative;
+	border-radius: 20px;
+    z-index: 1;
+    height: 74vh;
+	overflow: auto;
+	border: 2px solid white;
+}
+    
+
+	
+	th {
+		border: 2px solid #ffffcc;
+		height: 7vh;
+		color: #ffffcc;
+		font-size: 1.4em;
+	}
+
+	th:nth-of-type(1) {
+				width: 8vw;
+
+	}
+		th:nth-of-type(2) {
+		width: 50vw;
+	}
+
+	td {
+		width: 20vw;
+		color: #ffffcc;
+		font-size: 1.1em;
+		height: 10vh;
+	    border: 2px solid #ffffcc;
+		text-align: center;
+		cursor: pointer;
+		padding:5px;
+	}
+
+	td a {
+		color: #ffffcc;
+		font-size: 0.8em;
+
+	}
+
+	td a:hover {
+		color: pink;
+	}
+
+
+
+ul {
+	list-style-type: circle;
+}
+
+#contents ul li {
+	font-size: 0.8em;
+}
+
+	#Prev {
+		margin:0;
+		padding:0;
+	}
+
+
+
+	h2 {
+		font-size: 1.2em;
+		margin:0;
+		padding:0;
+	}
+
+	h3 {
+		font-size: 1em;
+		margin:0 0 10 0;
+		padding:0;
+	}
+
+
+	.smokeAnim p {
+		font-size: 1.2em;
+		/* font: 25px bold; */
+    }
+    
+    #eduDetails {
+        height: 80vh;
+    }
+

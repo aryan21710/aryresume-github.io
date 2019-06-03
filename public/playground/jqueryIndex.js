@@ -47,68 +47,63 @@ let setup = (function() {
 		// $('#bwheel').velocity({ transform: ['rotate(360deg)', 'rotate(0deg)'] },
 		// {duration:"fast",repeat:true, easing:'linear'});
 
-				let fWheelWidth,
-					bikeImgWidth,
-					bikeImgHeight,
-					bikeIntialOffset = 0;
+		let fWheelWidth,
+			bikeImgWidth,
+			bikeImgHeight,
+			bikeIntialOffset = 0;
 
-				if (windowHeight / windowWidth > 1.5) {
-					fWheelWidth = (windowWidth * 95) / 1368 + 20;
-					bikeImgWidth = (windowWidth * 180) / 700;
-					bikeImgHeight = (windowHeight * 158) / 1400;
-					bikeIntialOffset = 50;
-				} else if (windowHeight / windowWidth < 1.5 && windowHeight / windowWidth > 1.2) {
-					fWheelWidth = (windowWidth * 100) / 1368;
-					bikeImgWidth = (windowWidth * 180) / 1100;
-					bikeImgHeight = (windowHeight * 158) / 1400;
-					bikeIntialOffset = 20;
-				} else {
-					bikeIntialOffset = 200;
+		// iphone6/7/8:- 1.7733
+		// iphone6/7/8+ :- 1.7799
+		// iphoneX:- 2.158
+		if (windowHeight / windowWidth > 1.5) {
+			fWheelWidth = (windowWidth * 95) / 1368 + 20;
+			bikeImgWidth = (windowWidth * 180) / 700;
+			bikeImgHeight = (windowHeight * 158) / 1400;
+			bikeIntialOffset = 50;
+		} else if (windowHeight / windowWidth < 1.5 && windowHeight / windowWidth > 1.2) {
+			fWheelWidth = (windowWidth * 100) / 1368;
+			bikeImgWidth = (windowWidth * 180) / 1100;
+			bikeImgHeight = (windowHeight * 158) / 1400;
+			bikeIntialOffset = 20;
+		} else {
+			bikeIntialOffset = 200;
 
-					fWheelWidth = (windowWidth * 85) / 1368;
-					bikeImgWidth = (windowWidth * 180) / 1368;
-					bikeImgHeight = (windowHeight * 158) / 720;
-				}
+			fWheelWidth = (windowWidth * 85) / 1368;
+			bikeImgWidth = (windowWidth * 180) / 1368;
+			bikeImgHeight = (windowHeight * 158) / 720;
+		}
 
-				$('#bikeImg').css({
-					width: bikeImgWidth,
-					height: bikeImgHeight,
-				});
-				$('#fwheel').css({
-					width: fWheelWidth,
-					height: fWheelWidth,
-				});
-				$('#bwheel').css({
-					width: fWheelWidth,
-					height: fWheelWidth,
-				});
+		$('#bikeImg').css({
+			width: bikeImgWidth,
+			height: bikeImgHeight,
+		});
+		$('#fwheel').css({
+			width: fWheelWidth,
+			height: fWheelWidth,
+		});
+		$('#bwheel').css({
+			width: fWheelWidth,
+			height: fWheelWidth,
+		});
 
-				let WheelW = $('#fwheel').width();
-				let WheelH = $('#fwheel').height();
-				let WheelTPos = -(WheelW / 2);
-				let bikeImgInitLPos = WheelW / 2;
-				smokeDiv(
-					'#scenery',
-					bikeImgInitLPos + bikeIntialOffset,
-					$('#scenery').height() - WheelH
-				);
+		let WheelW = $('#fwheel').width();
+		let WheelH = $('#fwheel').height();
+		let WheelTPos = -(WheelW / 2);
+		let bikeImgInitLPos = WheelW / 2;
+		smokeDiv('#scenery', bikeImgInitLPos + bikeIntialOffset, $('#scenery').height() - WheelH);
 
-				$('#bwheel').css({
-					left: bikeIntialOffset,
-					top: WheelTPos,
-				});
-				$('#bikeImg').css({
-					left: bikeImgInitLPos + bikeIntialOffset,
-					bottom: 0,
-				});
-				$('#fwheel').css({
-					left: bikeImgWidth + bikeIntialOffset,
-					top: WheelTPos,
-				});
-
-		
-
-
+		$('#bwheel').css({
+			left: bikeIntialOffset,
+			top: WheelTPos,
+		});
+		$('#bikeImg').css({
+			left: bikeImgInitLPos + bikeIntialOffset,
+			bottom: 0,
+		});
+		$('#fwheel').css({
+			left: bikeImgWidth + bikeIntialOffset,
+			top: WheelTPos,
+		});
 
 		$('main').waitForImages({
 			finished: function() {
@@ -141,291 +136,182 @@ let setup = (function() {
 
 				finishLineSetup();
 
-					$('#bwheel').velocity(
-						{ rotateZ: '360deg' },
-						{
-							duration: 'fast',
-							loop: 10,
-							complete: function() {
-								$('li').removeClass('smokeli');
-								$('ul').removeClass('smokeul');
+				$('#bwheel').velocity(
+					{ rotateZ: '360deg' },
+					{
+						duration: 'fast',
+						loop: 10,
+						complete: function() {
+							$('li').removeClass('smokeli');
+							$('ul').removeClass('smokeul');
 
-								$('#landingPage').velocity(
-									{ translateX: '-450vw' },
-									{ duration: 5500 }
-								);
+							$('#landingPage').velocity({ translateX: '-450vw' }, { duration: 5500 });
 
-								$('#bwheel').css({ left: 0, top: WheelTPos });
-								$('#bikeImg').css({ left: bikeImgInitLPos, bottom: 0 });
-								$('#fwheel').css({
-									left: bikeImgWidth,
-									top: WheelTPos,
-								});
+							$('#bwheel').css({ left: 0, top: WheelTPos });
+							$('#bikeImg').css({ left: bikeImgInitLPos, bottom: 0 });
+							$('#fwheel').css({
+								left: bikeImgWidth,
+								top: WheelTPos,
+							});
 
-								console.log(windowWidth + ':' + fwheelStopPos);
-								console.log($('#fwheel').position().left);
-								let bwheelStopPos =
-									fwheelStopPos -
-									($('#fwheel').position().left -
-										$('#bwheel').position().left);
-								let bikeImgStopPos =
-									fwheelStopPos -
-									($('#fwheel').position().left -
-										$('#fwheel').width() / 2) -
-									5;
+							console.log(windowWidth + ':' + fwheelStopPos);
+							console.log($('#fwheel').position().left);
+							let bwheelStopPos =
+								fwheelStopPos - ($('#fwheel').position().left - $('#bwheel').position().left);
+							let bikeImgStopPos =
+								fwheelStopPos - ($('#fwheel').position().left - $('#fwheel').width() / 2) - 5;
 
-								//        console.log(`FOR ${windowWidth}X${windowHeight} the Bike-Wheel dimensions
-								//             are ${WheelW}X${WheelH} AND THE BIKE SIZE IS ${bikeImgWidth}X${bikeImgHeight}. THE BIKE STOPPING POSITION
-								// 			ARE FWHEEL:- ${fwheelStopPos}, BIKEIMG:- ${bikeImgStopPos}, BWHEEL:- ${bwheelStopPos}  `);
+							//        console.log(`FOR ${windowWidth}X${windowHeight} the Bike-Wheel dimensions
+							//             are ${WheelW}X${WheelH} AND THE BIKE SIZE IS ${bikeImgWidth}X${bikeImgHeight}. THE BIKE STOPPING POSITION
+							// 			ARE FWHEEL:- ${fwheelStopPos}, BIKEIMG:- ${bikeImgStopPos}, BWHEEL:- ${bwheelStopPos}  `);
 
-								$('#bwheel').velocity(
-									{
-										rotateZ: '360deg',
-										left: bwheelStopPos,
-									},
-									{
-										duration: '5500',
-									}
-								);
+							$('#bwheel').velocity(
+								{
+									rotateZ: '360deg',
+									left: bwheelStopPos,
+								},
+								{
+									duration: '5500',
+								}
+							);
 
-								$('#bikeImg').append(
-									'<audio autoplay> <source src="../sounds/biker.mp3"></audio>'
-								);
+							$('#bikeImg').append('<audio autoplay> <source src="../sounds/biker.mp3"></audio>');
 
-								$('#fwheel').velocity(
-									{
-										rotateZ: '360deg',
-										left: fwheelStopPos,
-									},
-									{
-										duration: '5500',
-									}
-								);
+							$('#fwheel').velocity(
+								{
+									rotateZ: '360deg',
+									left: fwheelStopPos,
+								},
+								{
+									duration: '5500',
+								}
+							);
 
-								$('#bikeImg').velocity(
-									{
-										left: bikeImgStopPos,
-									},
-									{
-										duration: '5500',
+							$('#bikeImg').velocity(
+								{
+									left: bikeImgStopPos,
+								},
+								{
+									duration: '5500',
 
-										complete: function() {
-											$('#bwheel').velocity(
-												{ left: '0vh' },
-												{
-													duration: '8500',
-												}
-											);
+									complete: function() {
+										$('#bwheel').velocity(
+											{ left: '0vh' },
+											{
+												duration: '8500',
+											}
+										);
 
-											$('#fwheel').velocity(
-												{ left: '-100vh' },
-												{
-													duration: '8500',
-												}
-											);
+										$('#fwheel').velocity(
+											{ left: '-100vh' },
+											{
+												duration: '8500',
+											}
+										);
 
-											$('#bikeImg').velocity(
-												{ top: '-50vh' },
-												{
-													duration: '1500',
-													complete: function() {
-														$('#landingPage').velocity(
-															{
-																right: '100vw',
+										$('#bikeImg').velocity(
+											{ top: '-50vh' },
+											{
+												duration: '1500',
+												complete: function() {
+													$('#landingPage').velocity(
+														{
+															right: '100vw',
+														},
+														{
+															duration: 1000,
+														}
+													);
+
+													$('#resume').velocity(
+														{
+															right: '100vw',
+														},
+														{
+															duration: 1000,
+															complete: function() {
+																$('#smoke').remove();
+																$('.smokeCl0').remove();
+																$('audio').remove();
+																$('#banner').remove();
 															},
-															{
-																duration: 1000,
-															}
-														);
+														}
+													);
+ let fwdworkExAnim = 0;
 
-														$('#resume').velocity(
-															{
-																right: '100vw',
-															},
-															{
-																duration: 1000,
-																complete: function() {
-																	$(
-																		'#smoke'
-																	).remove();
-																	$(
-																		'.smokeCl0'
-																	).remove();
-																	$('audio').remove();
-																	$(
-																		'#banner'
-																	).remove();
+ $('#Next > button').click(() => {
+		$('#Prev > button').attr('disabled', false);
+		$('#Next > button').attr({
+			disabled: true,
+			color: 'red',
+		});
+
+		if ($('#weContent').width() - -$('#weContent').position().left >= $('#weContent').width() / 8) {
+			fwdworkExAnim = -$('#weContent').position().left + $('#weContent').width() / 8;
+			console.log(
+				$('#weContent').width() -
+					-$('#weContent').position().left +
+					':' +
+					':' +
+					$('#weContent').width() / 8 +
+					':' +
+					fwdworkExAnim
+			);
+
+			$('#weContent').velocity(
+				{
+					left: -fwdworkExAnim,
+				},
+				function() {
+					$('#Next > button').attr('disabled', false);
+				}
+			);
+		} else {
+			$('#Next > button').attr('disabled', true);
+		}
+ });
+
+
+													$('#Prev > button').click(() => {
+														$('#Next > button').attr('disabled', false);
+														$('#Prev > button').attr('disabled', true);
+
+														if ($('#weContent').position().left < -1) {
+															fwdworkExAnim =
+																-$('#weContent').position().left -
+																$('#weContent').width() / 8 
+																
+															console.log(
+																$('#weContent').width() -
+																	$('#weContent').position().left +
+																	':' +
+																	':' +
+																	$('#weContent').width() / 8 +
+																	':' +
+																	fwdworkExAnim
+															);
+
+															$('#weContent').velocity(
+																{
+																	left: -fwdworkExAnim,
 																},
-															}
-														);
-
-														let fwdworkExAnim = 0;
-
-														$('#Next > button').click(
-															() => {
-																$('#Prev > button').attr(
-																	'disabled',
-																	false
-																);
-																$(
-																	'#Next > button'
-																).attr({disabled:true,color:'red'});
-
-																if (
-																	$(
-																		'#weContent'
-																	).width() -
-																		-$(
-																			'#weContent'
-																		).position()
-																			.left >
-																	$(
-																		'#weContent'
-																	).width() /
-																		8
-																) {
-																	fwdworkExAnim =
-																		-$(
-																			'#weContent'
-																		).position()
-																			.left +
-																		$(
-																			'#weContent'
-																		).width() /
-																			8 +
-																		13;
-																	console.log(
-																		$(
-																			'#weContent'
-																		).width() -
-																			-$(
-																				'#weContent'
-																			).position()
-																				.left +
-																			':' +
-																			':' +
-																			$(
-																				'#weContent'
-																			).width() /
-																				8 +
-																			':' +
-																			fwdworkExAnim
-																	);
-
-																	$(
-																		'#weContent'
-																	).velocity(
-																		{
-																			left: -fwdworkExAnim,
-																		},
-																		function() {
-																			$(
-																				'#Next > button'
-																			).attr(
-																				'disabled',
-																				false
-																			);
-																		}
-																	);
-																} else {
-																	$(
-																		'#Next > button'
-																	).attr(
-																		'disabled',
-																		true
-																	);
+																function() {
+																	$('#Prev > button').attr('disabled', false);
 																}
-															}
-														);
-
-														$('#Prev > button').click(
-															() => {
-																$(
-																	'#Next > button'
-																).attr(
-																	'disabled',
-																	false
-																);
-																$(
-																	'#Prev > button'
-																).attr(
-																	'disabled',
-																	true
-																);
-
-																if (
-																	$(
-																		'#weContent'
-																	).position().left <
-																	-1
-																) {
-																	fwdworkExAnim =
-																		-$(
-																			'#weContent'
-																		).position()
-																			.left -
-																		$(
-																			'#weContent'
-																		).width() /
-																			8 -
-																		13;
-																	console.log(
-																		$(
-																			'#weContent'
-																		).width() -
-																			$(
-																				'#weContent'
-																			).position()
-																				.left +
-																			':' +
-																			':' +
-																			$(
-																				'#weContent'
-																			).width() /
-																				8 +
-																			':' +
-																			fwdworkExAnim
-																	);
-
-																	$(
-																		'#weContent'
-																	).velocity(
-																		{
-																			left: -fwdworkExAnim,
-																		},
-																		function() {
-																			$(
-																				'#Prev > button'
-																			).attr(
-																				'disabled',
-																				false
-																			);
-																		}
-																	);
-																} else {
-																	$(
-																		'#Prev > button'
-																	).attr(
-																		'disabled',
-																		true
-																	);
-																}
-															}
-														);
-													},
-												}
-											);
-										},
-									}
-								);
-			
-
-							},
-						}
-					);
-				
-					
-					
+															);
+														} else {
+															$('#Prev > button').attr('disabled', true);
+														}
+													});
+												},
+											}
+										);
+									},
+								}
+							);
+						},
+					}
+				);
 			},
 			waitForAll: true,
 		});

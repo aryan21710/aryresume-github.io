@@ -1,0 +1,252 @@
+@media screen and (max-width: 400px) and (min-width: 300px) {
+	#landingPage {
+		background-size: 100% 100%;
+	}
+
+	.profile {
+		display: grid;
+		grid-template-rows: 25vh 45vh;
+		grid-row-gap: 2vh;
+		grid-template-columns: 65vw;
+		overflow: auto;
+	}
+
+	.smokeul li {
+		border-radius: 50%;
+		width: 8vw;
+		height: 4vh;
+	}
+	main {
+		/* border: 2px solid blue; */
+	}
+
+
+	#smoke {
+		font: 0.65em bolder;
+	}
+
+	#profile,
+	#skills,
+	#education {
+		background-size: 100% 100%;
+		padding: 10px;
+	}
+
+	
+	#basicInfo p,
+	#profileStatement p {
+		font-size: 0.6em;
+		color: #ffffcc;
+	}
+
+
+
+	#eduDetails {
+		padding: 0px;
+		justify-content: flex-start;
+	}
+
+
+	
+
+	.smokeAnim p {
+		font-size: 1em;
+		/* font: 25px bold; */
+	}
+
+		
+	p,li {
+		font-size: 0.9em;
+		color: #ffffcc;
+	}
+
+	h1 {
+		font-size: 1.5em;
+	}
+
+	.workExp {
+		width: 95vw;
+		border: 2px solid white;
+		overflow: auto;
+	}
+
+	
+
+	#d1 {
+		display: grid;
+		grid-template-columns: 8vw 76vw 8vw;
+		height: 85vh;
+
+	}
+
+
+
+	
+
+
+	#weContent {
+    margin-left: 8vw;
+    z-index:-1;
+	margin-bottom: 10px;
+	padding: 0px;
+	overflow: auto;
+	display: grid;
+    grid-template-columns: repeat(8, 76vw);
+	width: 600vw;
+	grid-gap: 10vw;
+    height: 90vh;
+	position: relative;
+
+
+	}
+
+	#Comp1 {
+		z-index: 1;
+	}
+
+	
+	th {
+		border: 2px solid #ffffcc;
+		height: 7vh;
+		color: #ffffcc;
+		font-size: 1.4em;
+	}
+
+	th:nth-of-type(1) {
+				width: 8vw;
+
+	}
+		th:nth-of-type(2) {
+		width: 50vw;
+	}
+
+	td {
+		width: 20vw;
+		color: #ffffcc;
+		font-size: 1.1em;
+		height: 10vh;
+	    border: 2px solid #ffffcc;
+		text-align: center;
+		cursor: pointer;
+		padding:5px;
+	}
+
+	td a {
+		color: #ffffcc;
+		font-size: 0.8em;
+
+	}
+
+	td a:hover {
+		color: pink;
+	}
+
+
+
+	
+
+
+	#Comp1,
+#Comp2,
+#Comp3,
+#Comp4,
+#Comp5,
+#Comp6,
+#Comp7,
+#Comp8 {
+
+	position: relative;
+    border-radius: 20px;
+    height: 78vh;
+	z-index: 1;
+							overflow: auto;
+							padding:5px;
+							border: 2px solid red;
+
+}
+#contents ul {
+	list-style-type: circle;
+	text-align: left;
+}
+
+#contents ul li {
+	font-size: 0.8em;
+}
+
+
+
+
+
+
+
+	#Prev {
+		margin:0;
+		padding:0;
+	}
+
+	#Prev button, #Next button{
+    width: 6vw;
+}
+
+	h2 {
+		font-size: 1.2em;
+		margin:0;
+		padding:0;
+	}
+
+	h3 {
+		font-size: 1em;
+		margin:0 0 10 0;
+		padding:0;
+	}
+	#basicInfo {
+		display: grid;
+		grid-template-rows: 0.5fr 1fr;
+		grid-template-columns: 60vw;
+		justify-content: center;
+	}
+	.text {
+		padding: 0px;
+		font-size: 25px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.image, .text>h2 {
+		margin-left: auto;
+		margin-right:auto;
+		align-items: center;
+	}
+
+	.text > p {
+		line-height: 22px;
+		font-size: 0.6em;
+	}
+
+	
+
+	.image> img {
+		width: 30vw;
+		height:30vh;
+	}
+
+	.smokeul li {
+		border-radius: 50%;
+		width: 8vw;
+		height: 4vh;
+	}
+
+	#experience {
+		display: flex;
+		padding:0;
+		overflow: auto;
+	}
+
+
+	
+	#title {
+		margin-bottom: 10px;
+	}
+
+}
