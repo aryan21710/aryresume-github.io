@@ -62,15 +62,38 @@ main {
 
 .smokeul li:nth-child(even) {
 	animation: animEven 2.8s linear infinite;
+	-webkit-animation: animEven 2.8s linear infinite;
+    -moz-animation: animEven 2.8s linear infinite;
+	-o-animation: animEven 2.8s linear infinite;
 }
 
 .smokeul li:nth-child(odd) {
 	animation: animOdd 2.8s linear infinite;
+	-webkit-animation: animOdd 2.8s linear infinite;
+    -moz-animation: animOdd 2.8s linear infinite;
+	-o-animation: animOdd 2.8s linear infinite;
 }
 
 .smokeul li:nth-child(9) {
-	animation: none;
+		animation: none;
+	-webkit-animation: none;
+    -moz-animation: none;
+	-o-animation: none;
 	filter: blur(15px);
+}
+
+@-webkit-keyframes animEven {
+	0% {
+		-webkit-transform: translate(0, 0) scale(1);
+		opacity: 1;
+		filter: blur(5px);
+	}
+
+	100% {
+		-webkit-transform: translate(100px, -500px) scale(3);
+		opacity: 0;
+		filter: blur(10px);
+	}
 }
 
 @keyframes animEven {
@@ -82,6 +105,20 @@ main {
 
 	100% {
 		transform: translate(100px, -500px) scale(3);
+		opacity: 0;
+		filter: blur(10px);
+	}
+}
+
+@-webkit-keyframes animOdd {
+	0% {
+		-webkit-transform: translate(0, 0) scale(1);
+		opacity: 1;
+		filter: blur(5px);
+	}
+
+	100% {
+		-webkit-transform: translate(-100px, -500px) scale(3);
 		opacity: 0;
 		filter: blur(10px);
 	}
@@ -148,6 +185,16 @@ main {
 	/* border: 3px solid black; */
 }
 
+@-webkit-keyframes slide1 {
+	0% {
+		-webkit-transform:  translate3d(0, 0, 0);
+	}
+
+	100% {
+		-webkit-transform:  translate3d(-460vw, 0, 0);
+	}
+
+}
 
 @keyframes slide1 {
 	0% {
@@ -193,13 +240,6 @@ main {
 	background-position: center;
 }
 
-.rotateWheel1 {
-	animation: example 4s linear infinite;
-}
-
-.rotateWheel2 {
-	animation: example 0.01s linear infinite;
-}
 
 #banner {
 	content: url('./images/poles.png')
@@ -214,6 +254,9 @@ main {
 	grid-template-rows: repeat(4, 140vh);
 	overflow: auto;
 	animation: slide1 4s linear forwards;
+		-webkit-animation: slide1 4s linear forwards;
+    -moz-animation: slide1 4s linear forwards;
+	-o-animation: slide1 4s linear forwards;
 }
 
 
@@ -521,14 +564,15 @@ h1 {
 	margin-right: auto;
 }
 
-@keyframes example {
+
+/* @keyframes example {
 	from {
 		transform: rotate(0deg);
 	}
 	to {
 		transform: rotate(360deg);
 	}
-}
+} */
 
 .workExp {
 	margin-top: auto;
