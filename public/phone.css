@@ -38,7 +38,7 @@
 
 	#basicInfo {
 		display: grid;
-        grid-template-rows: 50% 90%;
+        grid-template-rows: 30% 100%;
         grid-gap: 10px;
 		grid-template-columns: 60vw;
         justify-content: center;
@@ -115,7 +115,22 @@
 	h1 {
         font-size: 1.5em;
         margin-top: 0.5em;
-    }
+	}
+	
+	.profile {
+		height: 85vh;
+		width: 85vw;
+	}
+
+			#contents1:hover > #front {
+						transform: perspective(600px) rotateY(-180deg);
+
+		}	
+
+			#contents1:hover > #contactInfo {
+						transform: perspective(600px) rotateY(0deg);
+
+		}
     
 
 	/*############################# */
@@ -190,7 +205,8 @@
 
     #Prev button, #Next button{
     width: 20vw;
-    margin: auto;
+	margin: auto;
+	cursor: pointer;
 }
 
 	#weContent {

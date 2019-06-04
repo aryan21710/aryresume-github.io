@@ -159,23 +159,6 @@ main {
 	}
 }
 
-.resumeAnim {
-	animation: slide1 9s linear forwards;
-}
-
-/* .slide2 {
-	animation: animslide2 4s ease-in forwards;
-}
-@keyframes animslide2 {
-	0% {
-		transform: translate3d(0, 0, 0);
-	}
-
-	100% {
-		transform: translate3d(100vw, 0, 0);
-	}
-} */
-
 
 
 #road {
@@ -277,8 +260,8 @@ main {
 	width: 80%;
 }
 
-#profile,
-#skills {
+
+#profile,#skills {
 	background-image: url('./images/orangeBG.png');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -287,13 +270,25 @@ main {
 	justify-content: flex-end;
 	align-items: center;
 	padding: 20px;
+	
 }
 
+
+
+#contents1 {
+		position: relative;
+
+}
+
+
+
 .profile {
-	display: grid;
-	grid-template-rows: 30vh 38vh;
-	grid-row-gap: 1vw;
-	grid-template-columns: 68vw;
+				display: flex;
+	justify-content: center;
+	align-items: center;
+		width: 74vw;
+			height: 120vh;
+
 }
 
 .image {
@@ -302,13 +297,17 @@ main {
 	padding: 20px;
 }
 
+#front h1 {
+	width: 18vw;
+}
+
 #basicInfo {
 	display: grid;
-	grid-template-columns: 1fr 1.5fr;
+	grid-template-columns: 0.9fr 1.5fr;
 	height: 60vh;
 }
 .text {
-	padding: 20px 0px;
+	padding: 20px;
 }
 
 h2 {
@@ -428,6 +427,64 @@ p #email {
 	padding: 20px;
 }
 
+	#front{
+	
+			width: 74vw;
+			height: 120vh;
+			position: absolute;	
+			top: 0%;
+			left: 0%;
+			backface-visibility: hidden;
+			transition: transform 0.6s linear;
+			overflow: hidden;
+			transform: perspective(600px) rotateY(0deg);
+	
+		} 
+
+
+		
+		#contactInfo {
+			width: 74vw;
+			height: 120vh;
+			background-image: url('./images/nightBG.png');
+			position: absolute;	
+			top: 0%;
+			left: 0%;
+			backface-visibility: hidden;
+			transition: transform 0.6s linear;
+			overflow: hidden;
+			transform: perspective(600px) rotateY(180deg);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0.8;
+			border-radius: 20px;
+		}
+		#content {
+			background-color: #000033;
+			width: 80%;
+			height: 200px;
+			text-align: center;
+			color: #ffffcc;
+			opacity: 1;
+			border: 2px solid black;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border-radius: 20px;
+		}
+
+			#contents1:hover > #front {
+						transform: perspective(600px) rotateY(-180deg);
+
+		}	
+
+			#contents1:hover > #contactInfo {
+						transform: perspective(600px) rotateY(0deg);
+
+		}
+
 #contents1 ol {
 	overflow: auto;
 }
@@ -458,6 +515,8 @@ h1 {
 	text-align: center;
 	line-height: 1.5em;
 	border-bottom: 3px dashed #ffffcc;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @keyframes example {
@@ -479,7 +538,7 @@ h1 {
 	background-color: #000033;
 	padding: 0;
 	margin-right: 20px;
-	overflow: auto;
+	overflow: hidden;
     height: 120vh;
 	position: relative;
 }

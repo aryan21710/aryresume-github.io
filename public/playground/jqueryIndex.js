@@ -1,5 +1,44 @@
 let setup = (function() {
 	$(document).ready(function() {
+
+				let windowWidth = $('main').width();
+				let windowHeight = $('main').height();
+				let smokeWid='5vw'
+				let smokeHt='10vh'
+				let bikeAnimDuration=0;
+				let fWheelWidth,
+					bikeImgWidth,
+					bikeImgHeight,
+					bikeIntialOffset = 0;
+				if (windowHeight / windowWidth > 1.5) {
+					// MOBILE MEDIA QUERY
+					fWheelWidth = (windowWidth * 95) / 1368 + 20;
+					bikeImgWidth = (windowWidth * 180) / 700;
+					bikeImgHeight = (windowHeight * 158) / 1400;
+					bikeIntialOffset = 50;
+					smokeWid = '5.5vw';
+					smokeHt = '11vh';
+					bikeAnimDuration=3000;
+				} else if (windowHeight / windowWidth < 1.5 && windowHeight / windowWidth > 1.2) {
+					// TABLET MEDIA QUERY
+					fWheelWidth = (windowWidth * 100) / 1368;
+					bikeImgWidth = (windowWidth * 180) / 1100;
+					bikeImgHeight = (windowHeight * 158) / 1400;
+					bikeIntialOffset = 20;
+					 smokeWid = '4vw';
+					smokeHt = '8vh';
+					bikeAnimDuration=3000;
+				} else {
+					// LAPTOP MEDIA QUERY
+					 smokeWid = '5vw';
+					smokeHt = '10vh';
+					bikeIntialOffset = 200;
+					bikeAnimDuration=5500;
+
+					fWheelWidth = (windowWidth * 85) / 1368;
+					bikeImgWidth = (windowWidth * 180) / 1368;
+					bikeImgHeight = (windowHeight * 158) / 720;
+				}
 		const smokeDiv = (parent, smokeLPos, smokeTPos) => {
 			$(parent).append('<div id="newDemo"></div>');
 			$('#newDemo').css({ marginTop: '50px' });
@@ -20,8 +59,8 @@ let setup = (function() {
 				$('#ulId li').css({
 					position: 'absolute',
 					borderRadius: '50%',
-					width: '5vw',
-					height: '10vh',
+					width: smokeWid,
+					height: smokeHt,
 					background: '#262626',
 					filter: 'blur(100px)',
 				});
@@ -40,38 +79,7 @@ let setup = (function() {
 			}
 		};
 
-		let windowWidth = $('main').width();
-		let windowHeight = $('main').height();
 
-		// rotateWheel addclass replaced with below code;
-		// $('#bwheel').velocity({ transform: ['rotate(360deg)', 'rotate(0deg)'] },
-		// {duration:"fast",repeat:true, easing:'linear'});
-
-		let fWheelWidth,
-			bikeImgWidth,
-			bikeImgHeight,
-			bikeIntialOffset = 0;
-
-		// iphone6/7/8:- 1.7733
-		// iphone6/7/8+ :- 1.7799
-		// iphoneX:- 2.158
-		if (windowHeight / windowWidth > 1.5) {
-			fWheelWidth = (windowWidth * 95) / 1368 + 20;
-			bikeImgWidth = (windowWidth * 180) / 700;
-			bikeImgHeight = (windowHeight * 158) / 1400;
-			bikeIntialOffset = 50;
-		} else if (windowHeight / windowWidth < 1.5 && windowHeight / windowWidth > 1.2) {
-			fWheelWidth = (windowWidth * 100) / 1368;
-			bikeImgWidth = (windowWidth * 180) / 1100;
-			bikeImgHeight = (windowHeight * 158) / 1400;
-			bikeIntialOffset = 20;
-		} else {
-			bikeIntialOffset = 200;
-
-			fWheelWidth = (windowWidth * 85) / 1368;
-			bikeImgWidth = (windowWidth * 180) / 1368;
-			bikeImgHeight = (windowHeight * 158) / 720;
-		}
 
 		$('#bikeImg').css({
 			width: bikeImgWidth,
@@ -145,7 +153,7 @@ let setup = (function() {
 							$('li').removeClass('smokeli');
 							$('ul').removeClass('smokeul');
 
-							$('#landingPage').velocity({ translateX: '-450vw' }, { duration: 5500 });
+							$('#landingPage').velocity({ translateX: '-450vw' }, { duration: bikeAnimDuration });
 
 							$('#bwheel').css({ left: 0, top: WheelTPos });
 							$('#bikeImg').css({ left: bikeImgInitLPos, bottom: 0 });
@@ -171,7 +179,7 @@ let setup = (function() {
 									left: bwheelStopPos,
 								},
 								{
-									duration: '5500',
+									duration: bikeAnimDuration,
 								}
 							);
 
@@ -183,7 +191,7 @@ let setup = (function() {
 									left: fwheelStopPos,
 								},
 								{
-									duration: '5500',
+									duration: bikeAnimDuration,
 								}
 							);
 
@@ -192,7 +200,7 @@ let setup = (function() {
 									left: bikeImgStopPos,
 								},
 								{
-									duration: '5500',
+									duration: bikeAnimDuration,
 
 									complete: function() {
 										$('#bwheel').velocity(

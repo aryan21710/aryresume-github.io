@@ -1,130 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
+		 <link href="./../fontawesome-free-5.8.2-web/css/all.css" rel="stylesheet">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.waitforimages/1.5.0/jquery.waitforimages.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
 
 	<title></title>
 	<style>
-		* {
-			box-sizing: border-box;
+
+		main  {
+			position: relative;
+			width: 500px;
+			height: 500px;
+			border: 2px solid black;
 		}
 
+		#front{
+			width: 500px;
+			height: 500px;
+			background-image: url('./../images/orangeBG.png');
+			position: absolute;	
+			top: 0%;
+			left: 0%;
+			backface-visibility: hidden;
+			transition: transform 0.6s linear;
+			overflow: hidden;
+			transform: perspective(600px) rotateY(0deg);
+			opacity: 0.7;
+
+
+
+
+		}
+
+		#contactInfo {
+			width: 500px;
+			height: 500px;
+			background-image: url('./../images/nightBG.png');
+			position: absolute;	
+			top: 0%;
+			left: 0%;
+			backface-visibility: hidden;
+			transition: transform 0.6s linear;
+			overflow: hidden;
+			transform: perspective(600px) rotateY(180deg);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0.8;
 	
 
-		p {
-			font-size: 20px;
-			position: relative;
-			color: red;
 		}
-	 #test {
-			margin: 150px;
-			border: 2px solid red;
-			padding: 50px;
-			width: 200px;
+		#content {
+			background-color: #000033;
+			width: 100%;
 			height: 200px;
-			background-image: url('./../images/unnamed.png');
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			margin: 50px;
+			text-align: center;
+			color: #ffffcc;
+			opacity: 1;
+			border: 2px solid black;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+		}
+		main:hover > #front {
+						transform: perspective(600px) rotateY(-180deg);
+
+		}	
+
+			main:hover > #contactInfo {
+						transform: perspective(600px) rotateY(0deg);
+
 		}
 
-		#test1 {
-			margin: 150px;
-			border: 2px solid red;
-			padding: 50px;
-			width: 200px;
-			height: 200px;
-			background-image: url('./../images/arycolouredited.jpg');
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
+		button {
+			position: absolute;
+			bottom: 0%;
+			left: 30%;
+			width: 150px;
+			height: 30px;
 		}
 
-			#test2 {
-			margin: 150px;
-			border: 2px solid red;
-			padding: 50px;
-			width: 200px;
-			height: 200px;
-			background-image: url('./../images/poles.png');
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
+		span {
+			color : white;
+			background: black;
+			border-radius: 50px;
+
 		}
-
-		ol {
-			list-style-type: none
-		}
-
-		li {
-			float: left;
-			font-size: 100px;
-			color : red;
-		}
-
-
-			.dummy {
-				animation: example 4s linear 1;
-			}
-
-		@keyframes example {
-			from {color : red}
-			to {color : black}
-		}
-		
 		
 	</style>
 </head>
 <body>
 	<p> this is a dummy html file. </p>
 
-	<div>
-			<img>
-			<div id="test">
-				<div id="test1"></div>
+		<main>
+				<div id="front">
+				<button>Contact Details</button>
 			</div>
-			<ol id="arrow">
-				<div id="test2"></div>
-				<li>=</li>
-				<li>=</li>
-				<li>=</li>
-				<li>=</li>
-				<li>></li>
-				<li>Next</li>
-			</ol>
 
-	</div>
-	<script>
-		// const img=document.querySelector('img');
-		// img.addEventListener('load',function() {
-		// 	// alert('starting animation now');
-		// 	document.querySelectorAll('#arrow li').forEach(f=>f.classList.add('dummy'))
-		// })
+			<div id="contactInfo">
+				<div id="content">
+					<p> <span><i class="fas fa-circle fa-spin fa-phone"></i></span> 91102831991</p>
+					<p> <span><i class="far fa-spin fa-envelope"></i></span> arysharma1209@gmail.com</p>
+					<p> <span><i class="fas fa-spin fa-home"></i></span>Address:- JP Nagar 7th Phase, Bengaluru</p>
 
-// 		 $(document).ready(function(){
-// 			$('<img/>').attr('src', '../images/road.png').on('load', function() {
-//    $(this).remove(); // prevent memory leaks as @benweet suggested
-//    $('#test').css('background-image', 'url(../images/road.png)');
-// });
+				</div>
 
-$('body').waitForImages(function() {
-    // alert('All images have loaded.');
-}, function(loaded, count, success) {
-//    alert(loaded + ' of ' + count + ' images has ' + (success ? 'loaded' : 'failed to load') +  '.');
-   $('#arrow li').addClass('dummy');
-});
+			</div>
 
-
-            
+		</main>
 		
-		
-	
-	
-	
-	
 
-	</script>
+
+	
+		
+
+	<!-- <script>
+$(document).ready(function() {
+	$('main').hover(function(){
+		$('#front').velocity({'rotateY':'180deg'},{duration:'2000',
+		complete: function() {
+		}
+	})
+	})
+})
+	</script> -->
 </body>
 </html>
