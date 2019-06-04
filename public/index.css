@@ -455,6 +455,7 @@ p #email {
 			overflow: hidden;
 			transform: perspective(600px) rotateY(180deg);
 			display: flex;
+			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			opacity: 0.8;
@@ -473,6 +474,7 @@ p #email {
 			justify-content: center;
 			align-items: center;
 			border-radius: 20px;
+			border: 2px solid white;
 		}
 
 			#contents1:hover > #front {

@@ -19,9 +19,14 @@
 		display: grid;
 		grid-template-rows: 85vh;
 		grid-template-columns: 60vw;
+		align-items: flex-start;
 		/* overflow: auto; */
     }
-    
+	
+	#contactInfo,#front {
+			width: 85vw;
+    height: 90vh;
+	}
     #contents1,
 #contents2 {
 	width: 85vw;
@@ -34,14 +39,36 @@
 	margin: auto;
 	/* border: 2px solid white; */
 }
+
+#hoverContactInfo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	flex-direction: row;
+	border: 2px solid white;
+	backface-visibility: hidden;
+}
+
+#hoverToProfile {
+		border: 2px solid white;
+		bottom: 10vh;
+			backface-visibility: hidden;
+
+
+}
 	
+#hoverContactInfo > span, #hoverToProfile > span  {
+	color : #ffffcc;
+}
 
 	#basicInfo {
 		display: grid;
-        grid-template-rows: 30% 100%;
-        grid-gap: 10px;
+		grid-template-rows: 20vh 45vh 6vh;
+		grid-gap: 2vh;
 		grid-template-columns: 60vw;
-        justify-content: center;
+		justify-content: center;
+		margin-top: 5vh;
 	}
 	.text {
 		padding: 0px;
@@ -65,8 +92,8 @@
 	
 
 	.image> img {
-		width: 30vw;
-		height:30vh;
+		width: 20vw;
+		height:20vh;
 	}
 
 	.smokeul li {
@@ -95,14 +122,14 @@
 	}
 
 	#eduDetails,
-	#profileStatement,
-	#basicInfo {
+	#profileStatement
+	 {
 		padding: 10px;
 		margin-top: 10px;
 	}
 
-	#profileStatement p,
-	#basicInfo p {
+	#profileStatement p
+	 {
 		margin-top: 20px;
 	}
 
@@ -122,15 +149,15 @@
 		width: 85vw;
 	}
 
-			#contents1:hover > #front {
+		#contents1:hover  #front {
 						transform: perspective(600px) rotateY(-180deg);
 
 		}	
 
-			#contents1:hover > #contactInfo {
+			#contents1:hover  #contactInfo {
 						transform: perspective(600px) rotateY(0deg);
 
-		}
+		} 
     
 
 	/*############################# */
