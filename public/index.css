@@ -253,10 +253,10 @@ main {
 	display: grid;
 	grid-template-rows: repeat(4, 140vh);
 	overflow: auto;
-	animation: slide1 4s linear forwards;
+	/* animation: slide1 4s linear forwards;
 		-webkit-animation: slide1 4s linear forwards;
     -moz-animation: slide1 4s linear forwards;
-	-o-animation: slide1 4s linear forwards;
+	-o-animation: slide1 4s linear forwards; */
 }
 
 
@@ -343,11 +343,7 @@ main {
 
 }
 
-.image {
-	align-items: center;
-	display: flex;
-	padding: 20px;
-}
+
 
 #front h1 {
 	width: 18vw;
@@ -357,6 +353,8 @@ main {
 	display: grid;
 	grid-template-columns: 0.9fr 1.5fr;
 	height: 60vh;
+	justify-content: center;
+	align-items: center;
 }
 .text {
 	padding: 20px;
