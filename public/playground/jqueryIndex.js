@@ -128,6 +128,7 @@ let setup = (function() {
 
 					// #KEYWORDS:-[adding an image dynamically in jquery with source attr]
 
+					
 					$('<img />', {
 						id: 'banner',
 					})
