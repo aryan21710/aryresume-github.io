@@ -253,10 +253,10 @@ main {
 	display: grid;
 	grid-template-rows: repeat(4, 140vh);
 	overflow: auto;
-	animation: slide1 4s linear forwards;
+	/* animation: slide1 4s linear forwards;
 		-webkit-animation: slide1 4s linear forwards;
     -moz-animation: slide1 4s linear forwards;
-	-o-animation: slide1 4s linear forwards;
+	-o-animation: slide1 4s linear forwards; */
 }
 
 
@@ -299,9 +299,11 @@ main {
 
 
 .image {
+	justify-content: center;
 	align-items: center;
 	display: flex;
-	margin-left: 20px;
+	margin-left: auto;
+	margin-right: auto;
 	background-image: url('./images/arycolouredited.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -326,10 +328,10 @@ main {
 
 
 
-#contents1 {
+/* #contents1 {
 		position: relative;
 
-}
+} */
 
 
 
@@ -337,9 +339,8 @@ main {
 .profile {
 				display: flex;
 	justify-content: center;
-	align-items: center;
-		width: 74vw;
-			height: 120vh;
+		width: 60%;
+			height: 100vh;
 
 }
 
@@ -349,15 +350,12 @@ main {
 	width: 18vw;
 }
 
-#basicInfo {
-	display: grid;
-	grid-template-columns: 0.9fr 1.5fr;
-	height: 60vh;
-	justify-content: center;
-	align-items: center;
-}
 .text {
 	padding: 20px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
 }
 
 h2 {
@@ -419,6 +417,13 @@ h1 {
 	font-size: 1em;
 }
 
+.text > h2 {
+	width: 40%;
+		margin-left: auto;
+	margin-right: auto;
+
+}
+
 #basicInfo > p {
 	font-size: 0.8em;
 }
@@ -478,28 +483,40 @@ p #email {
 }
 
 	#front{
-	
 			width: 74vw;
 			height: 120vh;
-			position: absolute;	
-			top: 0%;
-			left: 0%;
-			backface-visibility: hidden;
-			transition: transform 0.6s linear;
-			overflow: hidden;
-			transform: perspective(600px) rotateY(0deg);
-	
+			position: relative;
 		} 
 
 
 		
+#basicInfo {
+	display: grid;
+	grid-template-rows: 30vh 50vh;
+	height: 100vh;
+	position: absolute;	
+	top: 0%;
+    left: 20%;
+	grid-gap: 5vh;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15vh;
+	width: 60%;
+	backface-visibility: hidden;
+	transition: transform 0.6s linear;
+	overflow: hidden;
+	transform: perspective(600px) rotateY(0deg);
+
+}
+	
 		#contactInfo {
-			width: 74vw;
-			height: 120vh;
+			width: 60%;
+			height: 100vh;
 			background-image: url('./images/nightBG.png');
 			position: absolute;	
 			top: 0%;
-			left: 0%;
+			left: 20%;
+			margin-top: 15vh;
 			backface-visibility: hidden;
 			transition: transform 0.6s linear;
 			overflow: hidden;
@@ -527,12 +544,12 @@ p #email {
 			border: 2px solid white;
 		}
 
-			#contents1:hover > #front {
+			#front:hover > #basicInfo {
 						transform: perspective(600px) rotateY(-180deg);
 
 		}	
 
-			#contents1:hover > #contactInfo {
+			#front:hover > #contactInfo {
 						transform: perspective(600px) rotateY(0deg);
 
 		}
