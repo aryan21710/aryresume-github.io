@@ -487,9 +487,9 @@ h1 {
 	padding: 0px;
 	overflow: hidden;
 	display: grid;
-	grid-template-columns: repeat(8, 74vw);
+	grid-template-columns: repeat(9, 74vw);
 	height: 85vh;
-	width: 592vw;
+	width: 666vw;
 	position: relative;
 	margin-top: 22vh;
 }
@@ -506,7 +506,8 @@ h1 {
 #Comp5,
 #Comp6,
 #Comp7,
-#Comp8 {
+#Comp8,
+#Comp9 {
 	position: relative;
 	border-radius: 20px;
 	z-index: 1;

@@ -219,109 +219,243 @@ let setup = (function() {
 											{
 												duration: '1500',
 												complete: function() {
-													$('#landingPage').velocity(
-														{
-															right: '100vw',
-														},
-														{
-															duration: 1000,
-														}
-													);
+																			$(
+																				'#landingPage'
+																			).velocity(
+																				{
+																					right:
+																						'100vw',
+																				},
+																				{
+																					duration: 1000,
+																				}
+																			);
 
-													$('#resume').velocity(
-														{
-															right: '100vw',
-														},
-														{
-															duration: 1000,
-															complete: function() {
-																$('#smoke').remove();
-																$('.smokeCl0').remove();
-																$('audio').remove();
-																$('#banner').remove();
-															},
-														}
-													);
+																			$(
+																				'#resume'
+																			).velocity(
+																				{
+																					right:
+																						'100vw',
+																				},
+																				{
+																					duration: 1000,
+																					complete: function() {
+																						$(
+																							'#smoke'
+																						).remove();
+																						$(
+																							'.smokeCl0'
+																						).remove();
+																						$(
+																							'audio'
+																						).remove();
+																						$(
+																							'#banner'
+																						).remove();
+																					},
+																				}
+																			);
+																			// RESUME WORK PROFESSIONAL SECTION
 
-													let fwdworkExAnim = 0;
+																			let fwdworkExAnim = 0;
+																			console.log(
+																				'WECONTENT WIDTH:-' +
+																					$(
+																						'#weContent'
+																					).width() +
+																					'::::' +
+																					$(
+																						'#weContent'
+																					).width()
+																			)/9;									
+																			$(
+																				'#Next > button'
+																			).click(
+																				() => {
+																					$(
+																						'#Prev > button'
+																					).attr(
+																						'disabled',
+																						false
+																					);
+																					$(
+																						'#Next > button'
+																					).attr(
+																						{
+																							disabled: true,
+																							color:
+																								'red',
+																						}
+																					);
 
-													$('#Next > button').click(() => {
-														$('#Prev > button').attr('disabled', false);
-														$('#Next > button').attr({
-															disabled: true,
-															color: 'red',
-														});
+																					if (
+																						Math.round(
+																							$(
+																								'#weContent'
+																							).width() -
+																								-$(
+																									'#weContent'
+																								).position()
+																									.left
+																						) -
+																							Math.round(
+																								$(
+																									'#weContent'
+																								).width() /
+																									9
+																							) >
+																						10
+																					) {
+																						fwdworkExAnim =
+																							-Math.round(
+																								$(
+																									'#weContent'
+																								).position()
+																									.left
+																							) +
+																							Math.round(
+																								$(
+																									'#weContent'
+																								).width() /
+																									9
+																							);
+																						console.log(
+																							Math.round(
+																								$(
+																									'#weContent'
+																								).width() -
+																									-$(
+																										'#weContent'
+																									).position()
+																										.left
+																							) +
+																								':' +
+																								':' +
+																								Math.round(
+																									$(
+																										'#weContent'
+																									).width() /
+																										9
+																								) +
+																								':' +
+																								fwdworkExAnim
+																						);
 
-														if (
-															Math.round(
-																$('#weContent').width() -
-																	-$('#weContent').position().left
-															) -
-																Math.round($('#weContent').width() / 8) >
-															10
-														) {
-															fwdworkExAnim =
-																-Math.round($('#weContent').position().left) +
-																Math.round($('#weContent').width() / 8);
-															console.log(
-																Math.round(
-																	$('#weContent').width() -
-																		-$('#weContent').position().left
-																) +
-																	':' +
-																	':' +
-																	Math.round($('#weContent').width() / 8) +
-																	':' +
-																	fwdworkExAnim
-															);
+																						$(
+																							'#weContent'
+																						).velocity(
+																							{
+																								left: -fwdworkExAnim,
+																							},
+																							function() {
+																								$(
+																									'#Next > button'
+																								).attr(
+																									'disabled',
+																									false
+																								);
+																							}
+																						);
+																					} else {
+																						$(
+																							'#Next > button'
+																						).attr(
+																							'disabled',
+																							true
+																						);
+																					}
+																				}
+																			);
 
-															$('#weContent').velocity(
-																{
-																	left: -fwdworkExAnim,
-																},
-																function() {
-																	$('#Next > button').attr('disabled', false);
-																}
-															);
-														} else {
-															$('#Next > button').attr('disabled', true);
-														}
-													});
+																			$(
+																				'#Prev > button'
+																			).click(
+																				() => {
+																					$(
+																						'#Next > button'
+																					).attr(
+																						'disabled',
+																						false
+																					);
+																					$(
+																						'#Prev > button'
+																					).attr(
+																						'disabled',
+																						true
+																					);
 
-													$('#Prev > button').click(() => {
-														$('#Next > button').attr('disabled', false);
-														$('#Prev > button').attr('disabled', true);
+																					if (
+																						Math.round(
+																							$(
+																								'#weContent'
+																							).position()
+																								.left
+																						) <
+																						-1
+																					) {
+																						fwdworkExAnim =
+																							-Math.round(
+																								$(
+																									'#weContent'
+																								).position()
+																									.left
+																							) -
+																							Math.round(
+																								$(
+																									'#weContent'
+																								).width() /
+																									9
+																							);
 
-														if (Math.round($('#weContent').position().left) < -1) {
-															fwdworkExAnim =
-																-Math.round($('#weContent').position().left) -
-																Math.round($('#weContent').width() / 8);
+																						console.log(
+																							Math.round(
+																								$(
+																									'#weContent'
+																								).width() -
+																									-$(
+																										'#weContent'
+																									).position()
+																										.left
+																							) +
+																								':' +
+																								':' +
+																								Math.round(
+																									$(
+																										'#weContent'
+																									).width() /
+																										9
+																								) +
+																								':' +
+																								fwdworkExAnim
+																						);
 
-															console.log(
-																Math.round(
-																	$('#weContent').width() -
-																		-$('#weContent').position().left
-																) +
-																	':' +
-																	':' +
-																	Math.round($('#weContent').width() / 8) +
-																	':' +
-																	fwdworkExAnim
-															);
-
-															$('#weContent').velocity(
-																{
-																	left: -fwdworkExAnim,
-																},
-																function() {
-																	$('#Prev > button').attr('disabled', false);
-																}
-															);
-														} else {
-															$('#Prev > button').attr('disabled', true);
-														}
-													});
-												},
+																						$(
+																							'#weContent'
+																						).velocity(
+																							{
+																								left: -fwdworkExAnim,
+																							},
+																							function() {
+																								$(
+																									'#Prev > button'
+																								).attr(
+																									'disabled',
+																									false
+																								);
+																							}
+																						);
+																					} else {
+																						$(
+																							'#Prev > button'
+																						).attr(
+																							'disabled',
+																							true
+																						);
+																					}
+																				}
+																			);
+																		},
 											}
 										);
 									},
