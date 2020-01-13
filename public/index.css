@@ -22,10 +22,11 @@ main {
 	display: grid;
 	grid-template-rows: minmax(auto, 1fr) minmax(auto, 0.25fr);
 	width: 560vw;
+
 }
 
 #scenery {
-	background-image: url('./images/Optimised/mainsignboard.webp');
+	background-image: url('./images/mainsignboard.jpg');
 	background-position: left top;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -92,7 +93,7 @@ main {
 #bikeImg {
 	position: absolute;
 	bottom: -40vh;
-	background-image: url('./images/Optimised/bikewithoutwheel.webp');
+	background-image: url('./images/bikewithoutwheel.png');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	background-position: center;
@@ -120,7 +121,7 @@ main {
 }
 
 #road {
-	background-image: url('./images/Optimised/road.webp');
+	background-image: url('./images/road.png');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	background-position: center;
@@ -134,7 +135,7 @@ main {
 	bottom: 20vh;
 	float: left;
 	object-fit: 100% 100%;
-	background-image: url('./images/Optimised/unnamed.webp');
+	background-image: url('./images/unnamed.png');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	background-position: center;
@@ -144,14 +145,14 @@ main {
 	position: absolute;
 	bottom: 20vh;
 	object-fit: 100% 100%;
-	background-image: url('./images/Optimised/unnamed.webp');
+	background-image: url('./images/unnamed.png');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	background-position: center;
 }
 
 #banner {
-	content: url('./images/Optimised/poles.webp');
+	content: url('./images/poles.png');
 }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  */
@@ -216,7 +217,7 @@ td a:hover {
 
 #profile,
 #skills {
-	background-image: url('./images/Optimised/orangeBG.webp');
+	background-image: url('./images/orangeBG.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -294,7 +295,7 @@ h1 {
 
 #experience,
 #education {
-	background-image: url('./images/Optimised/nightBG.webp');
+	background-image: url('./images/nightBG.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -367,7 +368,7 @@ h1 {
 #contactInfo {
 	width: 60%;
 	height: 100vh;
-	background-image: url('./images/Optimised/nightBG.webp');
+	background-image: url('./images/nightBG.png');
 	position: absolute;
 	top: 0%;
 	left: 20%;
