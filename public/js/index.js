@@ -66,12 +66,12 @@ let setup = (function() {
 
 				if (i % 2 == 0) {
 					$('#ulId li:eq(' + i + ')').css({
-						animation: 'animEven 2.8s linear infinite',
+						animation: 'bikeSmokeEvenFumes 2.8s linear infinite',
 						animationDelay: i * 0.4 + 's',
 					});
 				} else {
 					$('#ulId li:eq(' + i + ')').css({
-						animation: 'animOdd 2.8s linear infinite',
+						animation: 'bikeSmokeOddFumes 2.8s linear infinite',
 						animationDelay: i * 0.4 + 's',
 					});
 				}
