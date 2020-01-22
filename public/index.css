@@ -32,8 +32,6 @@ main {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	position: relative;
-	border: 2px solid red;
-
 }
 
 @-webkit-keyframes bikeSmokeEvenFumes {
