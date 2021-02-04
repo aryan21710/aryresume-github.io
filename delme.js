@@ -238,20 +238,6 @@
 													end-to-end manual and automated tests to validate new Product
 													Development life cycle for EX Series router { EX8200, EX4200,
 													EX-XRE Virtual Chassis)</li>
-													<li> Responsibilities as a Team lead in a MPLS Project. Coordinated
-														and managed MPLS Features. Reviewed all the Functional Spec, Unit
-														Testplan, Systest Plan. Conducted training for the team on MPLS
-														Overview. </li>												
-											</ul>
-										</div>
-										<div id="Comp6">
-											<h2> Juniper Networks, Bengaluru</h2>
-											<h3> Nov 2008 - April 2011</h3>
-											<ul>
-												<li>Testplan creation using RFC, SFS and PRD . Execution of
-													end-to-end manual and automated tests to validate new Product
-													Development life cycle for EX Series router { EX8200, EX4200,
-													EX-XRE Virtual Chassis)</li>
 												<li> Tested NSSU. OSPF,MPLS L3VPN, MPLS L2VPN </li>
 												<li> Responsibilities as a Team lead in a MPLS Project. Coordinated
 													and managed MPLS Features. Reviewed all the Functional Spec, Unit
@@ -266,7 +252,19 @@
 												<li>Used effectively during Juniper Shutdown Period. Wrote a
 													whitepaper “HOW TO BOOT THE JUNIPER SWITCH/ROUTER” for other team
 													members.</li>
-											
+											</ul>
+										</div>
+										<div id="Comp6">
+											<h2> Juniper Networks, Bengaluru</h2>
+											<h3> Nov 2008 - April 2011</h3>
+											<ul>
+												<li>Joined as a technical support engineer. Lateral movement into
+													networking IBU.Helping customers with home networks, DSL
+													connections with various DSL modems like netopia, uhp, broadmax,
+													visionet.</li>
+												<li>Troubleshooting PPPOE connection involving technologies like DSL
+													.Establishing and troubleshooting small and medium enterprise
+													networks with multiple computers, routers and switches.</li>
 											</ul>
 										</div>
 										<div id="Comp7">
@@ -303,22 +301,6 @@
 												<li>Automation of test plans independently involving extensive usage
 													of TCL and Expect. </li>
 											</ul>
-										</div>
-
-										<div id="Comp9">
-											<h2>Vinciti Networks</h2>
-											<h3>Mar 2004- Sep 2014 </h3>
-									
-												<ul>
-													<li>Joined as a technical support engineer. Lateral movement into
-														networking IBU.Helping customers with home networks, DSL
-														connections with various DSL modems like netopia, uhp, broadmax,
-														visionet.</li>
-													<li>Troubleshooting PPPOE connection involving technologies like DSL
-														.Establishing and troubleshooting small and medium enterprise
-														networks with multiple computers, routers and switches.</li>
-												</ul>
-											
 										</div>
 
 
